@@ -1,1 +1,395 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Networking Fundamentals · MOUTASEM-AWAD</title><style>body{margin:0;background:#f5f4ee;color:#183c2c;font:16px/1.7 Arial,sans-serif}main{max-width:900px;margin:auto;padding:35px 22px}h1{font-size:38px;line-height:1.2}h2{margin-top:40px}article{background:white;border:1px solid #d8dfd5;border-radius:12px;padding:20px;margin:14px 0;break-inside:avoid}h3{margin:0}p{margin:10px 0}.tip{color:#47634e;font-size:15px}a{color:inherit}button,.button{background:#183c2c;color:white;padding:12px 20px;border:0;border-radius:8px;text-decoration:none;display:inline-block;margin:6px}footer{border-top:1px solid #cad3c8;margin-top:35px;padding-top:20px;font-size:13px}@media print{body{background:white}main{padding:0}button,.nav{display:none}h1{font-size:28px}article{padding:12px}footer{font-size:10px}}</style><main><a class="nav" href="./">← Both labs</a><h1>Networking, made simple.</h1><p>A short guide to core concepts and common interview comparisons. Learn the idea first; remember the example.</p><button onclick="window.print()">Print / Save as PDF</button><section><h2>Basics</h2><article><h3>Network</h3><p>Devices connected so they can exchange data and share resources.</p><p class="tip"><b>Remember:</b> Two computers sharing a printer are using a network.</p></article><article><h3>Protocol</h3><p>Rules that devices follow to communicate.</p><p class="tip"><b>Remember:</b> HTTP defines how a browser and web server exchange messages.</p></article><article><h3>LAN and WAN</h3><p>A LAN connects devices in a small area, such as an office. A WAN connects networks over a larger area.</p><p class="tip"><b>Remember:</b> Remember: local area versus wide area.</p></article><article><h3>Bandwidth and latency</h3><p>Bandwidth describes a link’s capacity. Latency is the time data takes to travel.</p><p class="tip"><b>Remember:</b> A link can have high capacity but still have a long delay.</p></article></section><section><h2>Devices</h2><article><h3>Repeater</h3><p>Regenerates a signal so it can travel farther. It works at the physical layer.</p><p class="tip"><b>Remember:</b> It does not choose a route or inspect IP addresses.</p></article><article><h3>Hub</h3><p>A multiport repeater. It repeats incoming signals to the other ports.</p><p class="tip"><b>Remember:</b> It does not learn which device is connected to which port.</p></article><article><h3>Switch</h3><p>A basic Ethernet switch connects devices in a LAN and forwards frames using MAC addresses. It works at Layer 2.</p><p class="tip"><b>Remember:</b> It learns source MAC addresses. Unknown destinations and broadcasts are flooded to other ports in the same broadcast domain.</p></article><article><h3>Router</h3><p>Connects different IP networks and forwards packets using a routing table. It works at Layer 3.</p><p class="tip"><b>Remember:</b> Your computer sends traffic for another network to its default gateway, usually a router.</p></article></section><section><h2>Models</h2><article><h3>OSI model</h3><p>A seven-layer model that organizes networking jobs.</p><p class="tip"><b>Remember:</b> Bottom to top: Physical, Data Link, Network, Transport, Session, Presentation, Application.</p></article><article><h3>OSI layers in plain English</h3><p>Physical: signals and bits. Data Link: frames on a link. Network: IP addressing and routing. Transport: communication between applications. Session: managing conversations. Presentation: data format, encryption and compression. Application: network services for applications.</p><p class="tip"><b>Remember:</b> Remember common examples: repeater L1, basic switch L2, router L3, TCP/UDP L4.</p></article><article><h3>TCP/IP model</h3><p>The protocol family used by the Internet. These notes use five layers: Physical, Data Link, Network, Transport and Application.</p><p class="tip"><b>Remember:</b> Some descriptions combine the bottom two into a four-layer model; keep the course’s five-layer view for revision.</p></article><article><h3>Encapsulation</h3><p>Each layer adds information needed to deliver the data. The receiver removes it in reverse order.</p><p class="tip"><b>Remember:</b> Think: application data → TCP segment → IP packet → Ethernet frame → bits. UDP uses datagrams.</p></article></section><section><h2>Addressing</h2><article><h3>MAC address</h3><p>A link-layer address used to deliver Ethernet frames on a LAN. Ethernet MAC addresses are 48 bits long.</p><p class="tip"><b>Remember:</b> A switch uses MAC addresses when forwarding frames.</p></article><article><h3>IP address</h3><p>A logical address used to identify an interface and route packets between networks. IPv4 is 32 bits; IPv6 is 128 bits.</p><p class="tip"><b>Remember:</b> MAC helps delivery on a link; IP helps delivery across networks.</p></article><article><h3>Subnet and subnet mask</h3><p>A subnet is a portion of an IP network. A mask or prefix length identifies the network part of an address.</p><p class="tip"><b>Remember:</b> 192.168.1.10/24 belongs to network 192.168.1.0/24. The /24 means 24 network bits.</p></article><article><h3>Default gateway</h3><p>The next-hop router a device uses when no more specific route matches the destination.</p><p class="tip"><b>Remember:</b> Traffic to a different network usually goes to the gateway.</p></article><article><h3>ARP</h3><p>Finds the MAC address associated with an IPv4 address on the local link.</p><p class="tip"><b>Remember:</b> For a remote destination, your computer finds the gateway’s MAC address, not the remote server’s MAC address.</p></article><article><h3>NAT</h3><p>Changes IP addresses as packets pass through a router. Port translation can let many private devices share one public IPv4 address.</p><p class="tip"><b>Remember:</b> NAT translation and firewall filtering are different jobs.</p></article></section><section><h2>Delivery</h2><article><h3>Routing and forwarding</h3><p>Routing determines paths and builds routing information. Forwarding moves a packet to the chosen outgoing interface.</p><p class="tip"><b>Remember:</b> Static routes are entered manually; dynamic routing protocols exchange routing information.</p></article><article><h3>TCP</h3><p>Provides reliable, ordered delivery of a byte stream using acknowledgments and retransmissions.</p><p class="tip"><b>Remember:</b> Connection setup uses SYN → SYN-ACK → ACK.</p></article><article><h3>UDP</h3><p>Sends datagrams without built-in reliable delivery or ordering. It has no TCP-style connection setup.</p><p class="tip"><b>Remember:</b> It has less transport overhead; the application decides how to handle loss.</p></article><article><h3>Port number</h3><p>Identifies a service or application endpoint at the transport layer.</p><p class="tip"><b>Remember:</b> IP identifies the host interface; a port helps identify the application. Common examples: HTTP 80, DNS 53.</p></article><article><h3>Flow control and congestion control</h3><p>Flow control protects a receiver from too much incoming data. Congestion control reduces pressure on the network.</p><p class="tip"><b>Remember:</b> Receiver capacity and network capacity are different limits.</p></article></section><section><h2>Services</h2><article><h3>DNS</h3><p>A naming service that maps names to records, including IP addresses.</p><p class="tip"><b>Remember:</b> It helps your browser find the address for a website name. DNS is not the service that assigns your computer its address.</p></article><article><h3>DHCP</h3><p>Automatically provides network settings, including an IP address, subnet mask and gateway.</p><p class="tip"><b>Remember:</b> IPv4’s usual exchange: Discover → Offer → Request → Acknowledge (DORA).</p></article><article><h3>HTTP</h3><p>An application protocol for requests and responses between web clients and servers.</p><p class="tip"><b>Remember:</b> A browser requests a page; the server returns a response.</p></article></section><section><h2>Security</h2><article><h3>Confidentiality, integrity and authentication</h3><p>Confidentiality keeps data secret. Integrity detects unauthorized changes. Authentication checks an identity or message origin.</p><p class="tip"><b>Remember:</b> Encryption, integrity checking and identity checking solve different problems.</p></article></section><footer><p>Source map: I2208 Part 1 (network basics); Part 2 (layers, devices and addresses); Part 3 (signals and link capacity); Part 6 (Ethernet switching); Part 7 (IP, subnetting, routing and DHCP). I3304 Part 1 (layer recap, IPv4 and ARP); Parts 2–3 (routing); Part 4 (NAT and IPv6); Part 5 (TCP/UDP); Part 6 (application protocols and DNS); Part 7 (security). Examples are simplified applications of these concepts. This is a selection of common fundamentals, not a claim about which questions any particular interviewer will ask.</p><p>© MOUTASEM-AWAD</p></footer></main></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#f5f4ee">
+    <title>Networking Fundamentals · MOUTASEM-AWAD</title>
+    <script>
+      let theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      try {
+        theme = localStorage.getItem('networking-fundamentals-theme') || theme;
+      } catch {}
+      document.documentElement.dataset.theme = theme;
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --page-bg: #f5f4ee;
+        --text: #183c2c;
+        --card: #fff;
+        --border: #d8dfd5;
+        --tip: #47634e;
+        --footer-border: #cad3c8;
+        --button-bg: #183c2c;
+        --button-text: #fff;
+      }
+
+      :root[data-theme="dark"] {
+        color-scheme: dark;
+        --page-bg: #111e1a;
+        --text: #e2ecdf;
+        --card: #1a2a23;
+        --border: #35473c;
+        --tip: #afbeb0;
+        --footer-border: #35473c;
+        --button-bg: #c6eb97;
+        --button-text: #17251c;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page-bg);
+        color: var(--text);
+        font: 16px/1.7 Arial, sans-serif;
+        transition: background-color 160ms ease, color 160ms ease;
+      }
+
+      main {
+        max-width: 900px;
+        margin: auto;
+        padding: 35px 22px;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+
+      .toolbar-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      h1 {
+        font-size: 38px;
+        line-height: 1.2;
+      }
+
+      h2 {
+        margin-top: 40px;
+      }
+
+      article {
+        margin: 14px 0;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--card);
+        break-inside: avoid;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      .tip {
+        color: var(--tip);
+        font-size: 15px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      button,
+      .button {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        margin: 0;
+        padding: 10px 16px;
+        border: 0;
+        border-radius: 8px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        font: inherit;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid #7dbd9b;
+        outline-offset: 3px;
+      }
+
+      footer {
+        margin-top: 35px;
+        padding-top: 20px;
+        border-top: 1px solid var(--footer-border);
+        font-size: 13px;
+      }
+
+      .linkedin-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .linkedin-link:hover {
+        text-decoration: underline;
+      }
+
+      .linkedin-link svg {
+        width: 20px;
+        height: 20px;
+        flex: 0 0 auto;
+      }
+
+      @media print {
+        :root {
+          color-scheme: light;
+          --page-bg: #fff;
+          --text: #000;
+          --card: #fff;
+          --border: #ddd;
+          --tip: #333;
+          --footer-border: #aaa;
+        }
+
+        body {
+          background: white;
+          color: black;
+        }
+
+        main {
+          padding: 0;
+        }
+
+        button,
+        .nav {
+          display: none;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        article {
+          padding: 12px;
+        }
+
+        footer {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="toolbar">
+        <a class="nav" href="./">← Both labs</a>
+        <div class="toolbar-actions">
+          <button id="theme-toggle" type="button" aria-label="Switch to dark theme">☾ <span>Dark</span></button>
+          <button type="button" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+      </div>
+      <h1>Networking, made simple.</h1>
+      <p>A short guide to core concepts and common interview comparisons. Learn the idea first; remember the example.</p>
+      <section>
+        <h2>Basics</h2>
+        <article>
+          <h3>Network</h3>
+          <p>Devices connected so they can exchange data and share resources.</p>
+          <p class="tip"><b>Remember:</b> Two computers sharing a printer are using a network.</p>
+        </article>
+        <article>
+          <h3>Protocol</h3>
+          <p>Rules that devices follow to communicate.</p>
+          <p class="tip"><b>Remember:</b> HTTP defines how a browser and web server exchange messages.</p>
+        </article>
+        <article>
+          <h3>LAN and WAN</h3>
+          <p>A LAN connects devices in a small area, such as an office. A WAN connects networks over a larger area.</p>
+          <p class="tip"><b>Remember:</b> Remember: local area versus wide area.</p>
+        </article>
+        <article>
+          <h3>Bandwidth and latency</h3>
+          <p>Bandwidth describes a link’s capacity. Latency is the time data takes to travel.</p>
+          <p class="tip"><b>Remember:</b> A link can have high capacity but still have a long delay.</p>
+        </article>
+      </section>
+      <section>
+        <h2>Devices</h2>
+        <article>
+          <h3>Repeater</h3>
+          <p>Regenerates a signal so it can travel farther. It works at the physical layer.</p>
+          <p class="tip"><b>Remember:</b> It does not choose a route or inspect IP addresses.</p>
+        </article>
+        <article>
+          <h3>Hub</h3>
+          <p>A multiport repeater. It repeats incoming signals to the other ports.</p>
+          <p class="tip"><b>Remember:</b> It does not learn which device is connected to which port.</p>
+        </article>
+        <article>
+          <h3>Switch</h3>
+          <p>A basic Ethernet switch connects devices in a LAN and forwards frames using MAC addresses. It works at Layer 2.</p>
+          <p class="tip"><b>Remember:</b> It learns source MAC addresses. Unknown destinations and broadcasts are flooded to other ports in the same broadcast domain.</p>
+        </article>
+        <article>
+          <h3>Router</h3>
+          <p>Connects different IP networks and forwards packets using a routing table. It works at Layer 3.</p>
+          <p class="tip"><b>Remember:</b> Your computer sends traffic for another network to its default gateway, usually a router.</p>
+        </article>
+      </section>
+      <section>
+        <h2>Models</h2>
+        <article>
+          <h3>OSI model</h3>
+          <p>A seven-layer model that organizes networking jobs.</p>
+          <p class="tip"><b>Remember:</b> Bottom to top: Physical, Data Link, Network, Transport, Session, Presentation, Application.</p>
+        </article>
+        <article>
+          <h3>OSI layers in plain English</h3>
+          <p>Physical: signals and bits. Data Link: frames on a link. Network: IP addressing and routing. Transport: communication between applications. Session: managing conversations. Presentation: data format, encryption and compression. Application: network services for applications.</p>
+          <p class="tip"><b>Remember:</b> Remember common examples: repeater L1, basic switch L2, router L3, TCP/UDP L4.</p>
+        </article>
+        <article>
+          <h3>TCP/IP model</h3>
+          <p>The protocol family used by the Internet. These notes use five layers: Physical, Data Link, Network, Transport and Application.</p>
+          <p class="tip"><b>Remember:</b> Some descriptions combine the bottom two into a four-layer model; keep the course’s five-layer view for revision.</p>
+        </article>
+        <article>
+          <h3>Encapsulation</h3>
+          <p>Each layer adds information needed to deliver the data. The receiver removes it in reverse order.</p>
+          <p class="tip"><b>Remember:</b> Think: application data → TCP segment → IP packet → Ethernet frame → bits. UDP uses datagrams.</p>
+        </article>
+      </section>
+      <section>
+        <h2>Addressing</h2>
+        <article>
+          <h3>MAC address</h3>
+          <p>A link-layer address used to deliver Ethernet frames on a LAN. Ethernet MAC addresses are 48 bits long.</p>
+          <p class="tip"><b>Remember:</b> A switch uses MAC addresses when forwarding frames.</p>
+        </article>
+        <article>
+          <h3>IP address</h3>
+          <p>A logical address used to identify an interface and route packets between networks. IPv4 is 32 bits; IPv6 is 128 bits.</p>
+          <p class="tip"><b>Remember:</b> MAC helps delivery on a link; IP helps delivery across networks.</p>
+        </article>
+        <article>
+          <h3>Subnet and subnet mask</h3>
+          <p>A subnet is a portion of an IP network. A mask or prefix length identifies the network part of an address.</p>
+          <p class="tip"><b>Remember:</b> 192.168.1.10/24 belongs to network 192.168.1.0/24. The /24 means 24 network bits.</p>
+        </article>
+        <article>
+          <h3>Default gateway</h3>
+          <p>The next-hop router a device uses when no more specific route matches the destination.</p>
+          <p class="tip"><b>Remember:</b> Traffic to a different network usually goes to the gateway.</p>
+        </article>
+        <article>
+          <h3>ARP</h3>
+          <p>Finds the MAC address associated with an IPv4 address on the local link.</p>
+          <p class="tip"><b>Remember:</b> For a remote destination, your computer finds the gateway’s MAC address, not the remote server’s MAC address.</p>
+        </article>
+        <article>
+          <h3>NAT</h3>
+          <p>Changes IP addresses as packets pass through a router. Port translation can let many private devices share one public IPv4 address.</p>
+          <p class="tip"><b>Remember:</b> NAT translation and firewall filtering are different jobs.</p>
+        </article>
+      </section>
+      <section>
+        <h2>Delivery</h2>
+        <article>
+          <h3>Routing and forwarding</h3>
+          <p>Routing determines paths and builds routing information. Forwarding moves a packet to the chosen outgoing interface.</p>
+          <p class="tip"><b>Remember:</b> Static routes are entered manually; dynamic routing protocols exchange routing information.</p>
+        </article>
+        <article>
+          <h3>TCP</h3>
+          <p>Provides reliable, ordered delivery of a byte stream using acknowledgments and retransmissions.</p>
+          <p class="tip"><b>Remember:</b> Connection setup uses SYN → SYN-ACK → ACK.</p>
+        </article>
+        <article>
+          <h3>UDP</h3>
+          <p>Sends datagrams without built-in reliable delivery or ordering. It has no TCP-style connection setup.</p>
+          <p class="tip"><b>Remember:</b> It has less transport overhead; the application decides how to handle loss.</p>
+        </article>
+        <article>
+          <h3>Port number</h3>
+          <p>Identifies a service or application endpoint at the transport layer.</p>
+          <p class="tip"><b>Remember:</b> IP identifies the host interface; a port helps identify the application. Common examples: HTTP 80, DNS 53.</p>
+        </article>
+        <article>
+          <h3>Flow control and congestion control</h3>
+          <p>Flow control protects a receiver from too much incoming data. Congestion control reduces pressure on the network.</p>
+          <p class="tip"><b>Remember:</b> Receiver capacity and network capacity are different limits.</p>
+        </article>
+      </section>
+      <section>
+        <h2>Services</h2>
+        <article>
+          <h3>DNS</h3>
+          <p>A naming service that maps names to records, including IP addresses.</p>
+          <p class="tip"><b>Remember:</b> It helps your browser find the address for a website name. DNS is not the service that assigns your computer its address.</p>
+        </article>
+        <article>
+          <h3>DHCP</h3>
+          <p>Automatically provides network settings, including an IP address, subnet mask and gateway.</p>
+          <p class="tip"><b>Remember:</b> IPv4’s usual exchange: Discover → Offer → Request → Acknowledge (DORA).</p>
+        </article>
+        <article>
+          <h3>HTTP</h3>
+          <p>An application protocol for requests and responses between web clients and servers.</p>
+          <p class="tip"><b>Remember:</b> A browser requests a page; the server returns a response.</p>
+        </article>
+      </section>
+      <section>
+        <h2>Security</h2>
+        <article>
+          <h3>Confidentiality, integrity and authentication</h3>
+          <p>Confidentiality keeps data secret. Integrity detects unauthorized changes. Authentication checks an identity or message origin.</p>
+          <p class="tip"><b>Remember:</b> Encryption, integrity checking and identity checking solve different problems.</p>
+        </article>
+      </section>
+      <footer>
+        <p>Source map: I2208 Part 1 (network basics); Part 2 (layers, devices and addresses); Part 3 (signals and link capacity); Part 6 (Ethernet switching); Part 7 (IP, subnetting, routing and DHCP). I3304 Part 1 (layer recap, IPv4 and ARP); Parts 2–3 (routing); Part 4 (NAT and IPv6); Part 5 (TCP/UDP); Part 6 (application protocols and DNS); Part 7 (security). Examples are simplified applications of these concepts. This is a selection of common fundamentals, not a claim about which questions any particular interviewer will ask.</p>
+        <p>© MOUTASEM-AWAD ·
+          <a class="linkedin-link" href="https://linkedin.com/in/mouatassem-awad-3a4078293" target="_blank" rel="noopener noreferrer" aria-label="Visit Moutasem Awad on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect width="24" height="24" rx="4" fill="#0a66c2"/>
+              <path fill="#fff" d="M5.2 8.7h3.1v10H5.2zm1.55-4.1a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm3.6 4.1h3v1.4h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8v5.5h-3.1v-4.9c0-1.2 0-2.7-1.7-2.7s-2 1.3-2 2.6v5h-3.1z"/>
+            </svg>
+            LinkedIn
+          </a>
+        </p>
+      </footer>
+    </main>
+    <script>
+      const themeToggle = document.querySelector('#theme-toggle');
+
+      function updateThemeButton() {
+        const nextTheme = theme === 'dark' ? 'light' : 'dark';
+        themeToggle.innerHTML = `${nextTheme === 'dark' ? '☾' : '☀'} <span>${nextTheme === 'dark' ? 'Dark' : 'Light'}</span>`;
+        themeToggle.setAttribute('aria-label', `Switch to ${nextTheme} theme`);
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#111e1a' : '#f5f4ee';
+      }
+
+      updateThemeButton();
+      themeToggle.addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        try {
+          localStorage.setItem('networking-fundamentals-theme', theme);
+        } catch {}
+        updateThemeButton();
+      });
+    </script>
+  </body>
+</html>
