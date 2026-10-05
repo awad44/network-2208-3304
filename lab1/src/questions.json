@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "q001",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "Which term describes variation in packet arrival times?",
+    "options": [
+      "Jitter",
+      "Throughput",
+      "Syntax",
+      "Attenuation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Jitter is uneven packet arrival timing and can affect audio or video quality.",
+    "source": {
+      "part": 1,
+      "page": 8
+    }
+  },
+  {
+    "id": "q002",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "What is a communication protocol?",
+    "options": [
+      "A set of rules governing communication",
+      "A physical cable",
+      "The power of a signal",
+      "A network's geographic size"
+    ],
+    "correctIndex": 0,
+    "explanation": "Protocols define how communicating devices exchange data.",
+    "source": {
+      "part": 1,
+      "page": 10
+    }
+  },
+  {
+    "id": "q003",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "Which transmission mode allows communication in only one direction?",
+    "options": [
+      "Simplex",
+      "Half-duplex",
+      "Full-duplex",
+      "Multipoint"
+    ],
+    "correctIndex": 0,
+    "explanation": "In simplex mode one device sends and the other only receives.",
+    "source": {
+      "part": 1,
+      "page": 12
+    }
+  },
+  {
+    "id": "q004",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "Which mode lets both stations transmit and receive simultaneously?",
+    "options": [
+      "Full-duplex",
+      "Half-duplex",
+      "Simplex",
+      "Time sharing only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Full-duplex supports simultaneous communication in both directions.",
+    "source": {
+      "part": 1,
+      "page": 13
+    }
+  },
+  {
+    "id": "q005",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "Which topology connects devices to a central controller?",
+    "options": [
+      "Star",
+      "Mesh",
+      "Bus",
+      "Ring"
+    ],
+    "correctIndex": 0,
+    "explanation": "A star uses a dedicated connection from each device to a central controller.",
+    "source": {
+      "part": 1,
+      "page": 25
+    }
+  },
+  {
+    "id": "q006",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "Which topology uses a shared backbone cable?",
+    "options": [
+      "Bus",
+      "Full mesh",
+      "Star",
+      "Point-to-point pair"
+    ],
+    "correctIndex": 0,
+    "explanation": "A bus is a multipoint topology with one long backbone cable.",
+    "source": {
+      "part": 1,
+      "page": 28
+    }
+  },
+  {
+    "id": "q007",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "Which network typically connects devices in an office, building, or campus?",
+    "options": [
+      "LAN",
+      "WAN",
+      "Worldwide internetwork only",
+      "Satellite constellation only"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes describe a LAN as a privately owned network with a limited local area.",
+    "source": {
+      "part": 1,
+      "page": 33
+    }
+  },
+  {
+    "id": "q008",
+    "difficulty": "Normal",
+    "topic": "Foundations",
+    "prompt": "Which protocol element specifies the format of data?",
+    "options": [
+      "Syntax",
+      "Semantics",
+      "Timing",
+      "Reliability"
+    ],
+    "correctIndex": 0,
+    "explanation": "Syntax describes data format; semantics describes meaning and timing describes when and how fast.",
+    "source": {
+      "part": 1,
+      "page": 40
+    }
+  },
+  {
+    "id": "q009",
+    "difficulty": "Normal",
+    "topic": "Models & addressing",
+    "prompt": "How many layers are in the OSI model?",
+    "options": [
+      "7",
+      "4",
+      "5",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "OSI has seven layers from Physical through Application.",
+    "source": {
+      "part": 2,
+      "page": 2
+    }
+  },
+  {
+    "id": "q010",
+    "difficulty": "Normal",
+    "topic": "Models & addressing",
+    "prompt": "Which OSI layer moves individual bits between neighboring nodes?",
+    "options": [
+      "Physical",
+      "Transport",
+      "Presentation",
+      "Network"
+    ],
+    "correctIndex": 0,
+    "explanation": "The physical layer provides movement of individual bits from one hop to the next.",
+    "source": {
+      "part": 2,
+      "page": 3
+    }
+  },
+  {
+    "id": "q011",
+    "difficulty": "Normal",
+    "topic": "Models & addressing",
+    "prompt": "Which layer moves frames from one hop to the next?",
+    "options": [
+      "Data Link",
+      "Network",
+      "Session",
+      "Application"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data Link provides hop-to-hop frame delivery.",
+    "source": {
+      "part": 2,
+      "page": 4
+    }
+  },
+  {
+    "id": "q012",
+    "difficulty": "Normal",
+    "topic": "Models & addressing",
+    "prompt": "Which layer provides logical addressing and routing?",
+    "options": [
+      "Network",
+      "Presentation",
+      "Physical",
+      "Session"
+    ],
+    "correctIndex": 0,
+    "explanation": "The network layer handles logical addresses and source-to-destination packet delivery.",
+    "source": {
+      "part": 2,
+      "page": 4
+    }
+  },
+  {
+    "id": "q013",
+    "difficulty": "Normal",
+    "topic": "Models & addressing",
+    "prompt": "Which layer delivers messages from one process to another?",
+    "options": [
+      "Transport",
+      "Physical",
+      "Data Link",
+      "Presentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transport provides process-to-process delivery, using port addresses.",
+    "source": {
+      "part": 2,
+      "page": 5
+    }
+  },
+  {
+    "id": "q014",
+    "difficulty": "Normal",
+    "topic": "Models & addressing",
+    "prompt": "Which OSI layer handles translation, encryption, and compression?",
+    "options": [
+      "Presentation",
+      "Session",
+      "Network",
+      "Physical"
+    ],
+    "correctIndex": 0,
+    "explanation": "These are the functions listed for the presentation layer.",
+    "source": {
+      "part": 2,
+      "page": 6
+    }
+  },
+  {
+    "id": "q015",
+    "difficulty": "Normal",
+    "topic": "Models & addressing",
+    "prompt": "How long is an Ethernet MAC address?",
+    "options": [
+      "48 bits",
+      "16 bits",
+      "32 bits",
+      "128 bits"
+    ],
+    "correctIndex": 0,
+    "explanation": "An Ethernet physical address contains 6 bytes, or 48 bits.",
+    "source": {
+      "part": 2,
+      "page": 9
+    }
+  },
+  {
+    "id": "q016",
+    "difficulty": "Normal",
+    "topic": "Signals & media",
+    "prompt": "Analog data is characterized by which type of values?",
+    "options": [
+      "Continuous values",
+      "Only two values",
+      "Only whole-number values",
+      "Only packet addresses"
+    ],
+    "correctIndex": 0,
+    "explanation": "Analog data varies continuously; digital data has discrete states.",
+    "source": {
+      "part": 3,
+      "page": 5
+    }
+  },
+  {
+    "id": "q017",
+    "difficulty": "Normal",
+    "topic": "Signals & media",
+    "prompt": "What is the relationship between frequency and period?",
+    "options": [
+      "They are reciprocals",
+      "They are always equal",
+      "They are unrelated",
+      "They both measure voltage"
+    ],
+    "correctIndex": 0,
+    "explanation": "Frequency is 1 divided by period, and period is 1 divided by frequency.",
+    "source": {
+      "part": 3,
+      "page": 8
+    }
+  },
+  {
+    "id": "q018",
+    "difficulty": "Normal",
+    "topic": "Signals & media",
+    "prompt": "What does attenuation mean?",
+    "options": [
+      "Loss of signal energy",
+      "Increase in bit count",
+      "Change of MAC address",
+      "Creation of new frequencies only"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes define attenuation as a loss of energy while a signal travels through a medium.",
+    "source": {
+      "part": 3,
+      "page": 31
+    }
+  },
+  {
+    "id": "q019",
+    "difficulty": "Normal",
+    "topic": "Signals & media",
+    "prompt": "Which is a guided transmission medium?",
+    "options": [
+      "Fiber-optic cable",
+      "Air",
+      "Vacuum",
+      "Free-space radio"
+    ],
+    "correctIndex": 0,
+    "explanation": "Guided media include twisted pair, coaxial cable, and optical fiber.",
+    "source": {
+      "part": 3,
+      "page": 59
+    }
+  },
+  {
+    "id": "q020",
+    "difficulty": "Normal",
+    "topic": "Signals & media",
+    "prompt": "Optical fiber represents bits using what?",
+    "options": [
+      "Pulses of light",
+      "Changes in copper resistance",
+      "Sound waves",
+      "Mechanical motion"
+    ],
+    "correctIndex": 0,
+    "explanation": "A laser or LED encodes bits as light pulses in optical fiber.",
+    "source": {
+      "part": 3,
+      "page": 64
+    }
+  },
+  {
+    "id": "q021",
+    "difficulty": "Normal",
+    "topic": "Encoding & modulation",
+    "prompt": "What does line coding convert?",
+    "options": [
+      "Digital data into digital signals",
+      "IP addresses into MAC addresses",
+      "Analog data into routing tables",
+      "Frames into subnet masks"
+    ],
+    "correctIndex": 0,
+    "explanation": "Line coding represents a string of bits as a sequence of digital signal elements.",
+    "source": {
+      "part": 4,
+      "page": 6
+    }
+  },
+  {
+    "id": "q022",
+    "difficulty": "Normal",
+    "topic": "Encoding & modulation",
+    "prompt": "What unit measures signal rate?",
+    "options": [
+      "Baud",
+      "Byte",
+      "Volt only",
+      "Bits per frame"
+    ],
+    "correctIndex": 0,
+    "explanation": "Signal rate counts signal elements per second and is measured in baud.",
+    "source": {
+      "part": 4,
+      "page": 7
+    }
+  },
+  {
+    "id": "q023",
+    "difficulty": "Normal",
+    "topic": "Encoding & modulation",
+    "prompt": "ASK varies which carrier characteristic?",
+    "options": [
+      "Amplitude",
+      "Frequency",
+      "Phase",
+      "Propagation speed"
+    ],
+    "correctIndex": 0,
+    "explanation": "Amplitude Shift Keying changes carrier amplitude to represent digital data.",
+    "source": {
+      "part": 4,
+      "page": 28
+    }
+  },
+  {
+    "id": "q024",
+    "difficulty": "Normal",
+    "topic": "Encoding & modulation",
+    "prompt": "FSK varies which carrier characteristic?",
+    "options": [
+      "Frequency",
+      "Amplitude",
+      "Cable length",
+      "Frame size"
+    ],
+    "correctIndex": 0,
+    "explanation": "Frequency Shift Keying changes carrier frequency according to the data.",
+    "source": {
+      "part": 4,
+      "page": 29
+    }
+  },
+  {
+    "id": "q025",
+    "difficulty": "Normal",
+    "topic": "Encoding & modulation",
+    "prompt": "PSK varies which carrier characteristic?",
+    "options": [
+      "Phase",
+      "Amplitude",
+      "Noise power only",
+      "Wavelength of the cable"
+    ],
+    "correctIndex": 0,
+    "explanation": "Phase Shift Keying represents digital data by changing carrier phase.",
+    "source": {
+      "part": 4,
+      "page": 29
+    }
+  },
+  {
+    "id": "q026",
+    "difficulty": "Normal",
+    "topic": "Error control",
+    "prompt": "What is a single-bit error?",
+    "options": [
+      "Exactly one bit in a data unit changes",
+      "Every bit changes",
+      "Only the header is deleted",
+      "A whole frame is repeated"
+    ],
+    "correctIndex": 0,
+    "explanation": "A single-bit error changes one bit in the data unit.",
+    "source": {
+      "part": 5,
+      "page": 5
+    }
+  },
+  {
+    "id": "q027",
+    "difficulty": "Normal",
+    "topic": "Error control",
+    "prompt": "Why are redundant bits added to data?",
+    "options": [
+      "To enable error detection or correction",
+      "To remove all transmission delay",
+      "To create more IP addresses",
+      "To eliminate the physical medium"
+    ],
+    "correctIndex": 0,
+    "explanation": "Error-control methods add extra bits with a defined relationship to the original data.",
+    "source": {
+      "part": 5,
+      "page": 6
+    }
+  },
+  {
+    "id": "q028",
+    "difficulty": "Normal",
+    "topic": "Error control",
+    "prompt": "What does Hamming distance count?",
+    "options": [
+      "Different corresponding bit positions",
+      "Number of frames transmitted",
+      "Length of a cable",
+      "Number of valid IP addresses"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Hamming distance between two words is the number of differing corresponding bits.",
+    "source": {
+      "part": 5,
+      "page": 9
+    }
+  },
+  {
+    "id": "q029",
+    "difficulty": "Normal",
+    "topic": "Link layer & access",
+    "prompt": "What is framing used for?",
+    "options": [
+      "Making groups of bits distinguishable as frames",
+      "Selecting the fastest routing algorithm",
+      "Amplifying light",
+      "Assigning IP leases"
+    ],
+    "correctIndex": 0,
+    "explanation": "The data link layer packages bits so one frame can be distinguished from another.",
+    "source": {
+      "part": 6,
+      "page": 6
+    }
+  },
+  {
+    "id": "q030",
+    "difficulty": "Normal",
+    "topic": "Link layer & access",
+    "prompt": "Which information does an Ethernet switch use for forwarding decisions?",
+    "options": [
+      "MAC addresses",
+      "Signal frequency",
+      "TCP sequence numbers only",
+      "Application filenames"
+    ],
+    "correctIndex": 0,
+    "explanation": "An Ethernet switch is a Layer 2 device that uses a MAC address table.",
+    "source": {
+      "part": 6,
+      "page": 14
+    }
+  },
+  {
+    "id": "q031",
+    "difficulty": "Normal",
+    "topic": "Link layer & access",
+    "prompt": "What is the key carrier-sensing rule in CSMA?",
+    "options": [
+      "Listen before transmitting",
+      "Transmit without checking the medium",
+      "Always wait for a central master",
+      "Change the IP address before sending"
+    ],
+    "correctIndex": 0,
+    "explanation": "CSMA checks whether another station is already sending before starting transmission.",
+    "source": {
+      "part": 6,
+      "page": 28
+    }
+  },
+  {
+    "id": "q032",
+    "difficulty": "Normal",
+    "topic": "IP & subnetting",
+    "prompt": "How many bits are in an IPv4 address?",
+    "options": [
+      "32",
+      "48",
+      "64",
+      "128"
+    ],
+    "correctIndex": 0,
+    "explanation": "IPv4 uses a 32-bit address space.",
+    "source": {
+      "part": 7,
+      "page": 8
+    }
+  },
+  {
+    "id": "q033",
+    "difficulty": "Normal",
+    "topic": "IP & subnetting",
+    "prompt": "What is a subnet mask used to determine?",
+    "options": [
+      "The network and host portions of an IPv4 address",
+      "The signal amplitude",
+      "The MAC vendor",
+      "The transport checksum"
+    ],
+    "correctIndex": 0,
+    "explanation": "The subnet mask identifies which address bits belong to the network and which to the host.",
+    "source": {
+      "part": 7,
+      "page": 10
+    }
+  },
+  {
+    "id": "q034",
+    "difficulty": "Normal",
+    "topic": "IP & subnetting",
+    "prompt": "What does IP's best-effort service mean?",
+    "options": [
+      "Delivery is not guaranteed by IP",
+      "IP guarantees delivery in order",
+      "IP retransmits every lost packet",
+      "IP requires an ACK for every packet"
+    ],
+    "correctIndex": 0,
+    "explanation": "IP provides no guarantee of delivery and relies on other protocols for recovery.",
+    "source": {
+      "part": 7,
+      "page": 6
+    }
+  },
+  {
+    "id": "q035",
+    "difficulty": "Medium",
+    "topic": "Foundations",
+    "prompt": "Two walkie-talkies let either user talk, but only one at a time. Which mode is this?",
+    "options": [
+      "Half-duplex",
+      "Full-duplex",
+      "Simplex",
+      "Two simultaneous simplex channels"
+    ],
+    "correctIndex": 0,
+    "explanation": "Half-duplex permits both directions, but not at the same time.",
+    "source": {
+      "part": 1,
+      "page": 13
+    }
+  },
+  {
+    "id": "q036",
+    "difficulty": "Medium",
+    "topic": "Foundations",
+    "prompt": "Four devices share the capacity of one link. Which connection type is described?",
+    "options": [
+      "Multipoint",
+      "Dedicated point-to-point",
+      "Full mesh",
+      "Two-device private link"
+    ],
+    "correctIndex": 0,
+    "explanation": "Multipoint links are shared by more than two devices.",
+    "source": {
+      "part": 1,
+      "page": 20
+    }
+  },
+  {
+    "id": "q037",
+    "difficulty": "Medium",
+    "topic": "Foundations",
+    "prompt": "Why can a central controller failure disrupt a star topology?",
+    "options": [
+      "All devices depend on that controller",
+      "Each device is connected to every other device",
+      "A star has no dedicated links",
+      "Every link is a shared backbone"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes identify dependency on the central point as a disadvantage of a star.",
+    "source": {
+      "part": 1,
+      "page": 27
+    }
+  },
+  {
+    "id": "q038",
+    "difficulty": "Medium",
+    "topic": "Foundations",
+    "prompt": "Which metric is the elapsed time between an inquiry and a reply?",
+    "options": [
+      "Response time",
+      "Transit time of only the inquiry",
+      "Signal period",
+      "Recovery frequency"
+    ],
+    "correctIndex": 0,
+    "explanation": "Response time includes the interval between an inquiry and the response.",
+    "source": {
+      "part": 1,
+      "page": 15
+    }
+  },
+  {
+    "id": "q039",
+    "difficulty": "Medium",
+    "topic": "Models & addressing",
+    "prompt": "A sender adds layer-specific information as data moves down the stack. What is this called?",
+    "options": [
+      "Encapsulation",
+      "Decapsulation",
+      "Quantization",
+      "Carrier sensing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Encapsulation adds each layer's information before passing data to the next lower layer.",
+    "source": {
+      "part": 2,
+      "page": 3
+    }
+  },
+  {
+    "id": "q040",
+    "difficulty": "Medium",
+    "topic": "Models & addressing",
+    "prompt": "A long transfer uses checkpoints so it can resume from a synchronization point. Which OSI layer supplies this function?",
+    "options": [
+      "Session",
+      "Physical",
+      "Network",
+      "Presentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Synchronization with checkpoints is a session-layer function.",
+    "source": {
+      "part": 2,
+      "page": 6
+    }
+  },
+  {
+    "id": "q041",
+    "difficulty": "Medium",
+    "topic": "Models & addressing",
+    "prompt": "Which original four-layer TCP/IP model is listed in the notes?",
+    "options": [
+      "Host-to-network, Internet, Transport, Application",
+      "Physical, Session, Presentation, Application",
+      "Data Link, Network, Session, Presentation",
+      "Physical, Data Link, Session, Transport"
+    ],
+    "correctIndex": 0,
+    "explanation": "The original TCP/IP suite has four layers; the notes also show a five-layer comparison with OSI.",
+    "source": {
+      "part": 2,
+      "page": 7
+    }
+  },
+  {
+    "id": "q042",
+    "difficulty": "Medium",
+    "topic": "Models & addressing",
+    "prompt": "Which address identifies a process among several processes on a destination host?",
+    "options": [
+      "Port address",
+      "MAC address",
+      "Subnet network address",
+      "Vendor OUI"
+    ],
+    "correctIndex": 0,
+    "explanation": "A 16-bit port address selects a process on the destination host.",
+    "source": {
+      "part": 2,
+      "page": 9
+    }
+  },
+  {
+    "id": "q043",
+    "difficulty": "Medium",
+    "topic": "Models & addressing",
+    "prompt": "Which statement distinguishes a switch from a hub?",
+    "options": [
+      "A switch understands frames and MAC addresses",
+      "A hub filters by destination MAC",
+      "A switch forwards only raw voltage to every port",
+      "A hub performs IP routing"
+    ],
+    "correctIndex": 0,
+    "explanation": "A hub repeats signals, while a switch can forward frames selectively using MAC addresses.",
+    "source": {
+      "part": 2,
+      "page": 10
+    }
+  },
+  {
+    "id": "q044",
+    "difficulty": "Medium",
+    "topic": "Signals & media",
+    "prompt": "A signal contains frequencies from 100 Hz to 900 Hz. What is its bandwidth?",
+    "options": [
+      "800 Hz",
+      "1000 Hz",
+      "900 Hz",
+      "500 Hz"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bandwidth is the highest frequency minus the lowest: 900 - 100 = 800 Hz.",
+    "source": {
+      "part": 3,
+      "page": 13
+    }
+  },
+  {
+    "id": "q045",
+    "difficulty": "Medium",
+    "topic": "Signals & media",
+    "prompt": "How many bits can one of eight distinct signal levels represent?",
+    "options": [
+      "3",
+      "8",
+      "4",
+      "2"
+    ],
+    "correctIndex": 0,
+    "explanation": "The number of bits per level is log2(8) = 3.",
+    "source": {
+      "part": 3,
+      "page": 22
+    }
+  },
+  {
+    "id": "q046",
+    "difficulty": "Medium",
+    "topic": "Signals & media",
+    "prompt": "Why is modulation needed to send digital data over a band-pass channel?",
+    "options": [
+      "The digital signal must be converted into a suitable analog signal",
+      "The channel includes zero frequency by definition",
+      "Modulation removes all noise",
+      "Modulation adds network addresses"
+    ],
+    "correctIndex": 0,
+    "explanation": "Broadband transmission over a band-pass channel requires digital-to-analog conversion.",
+    "source": {
+      "part": 3,
+      "page": 27
+    }
+  },
+  {
+    "id": "q047",
+    "difficulty": "Medium",
+    "topic": "Signals & media",
+    "prompt": "Frequency components arrive with different delays and change the signal shape. Which impairment is this?",
+    "options": [
+      "Distortion",
+      "Jitter of a MAC table",
+      "Pure attenuation only",
+      "Quantization only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Different delays change component phases and distort a composite signal.",
+    "source": {
+      "part": 3,
+      "page": 36
+    }
+  },
+  {
+    "id": "q048",
+    "difficulty": "Medium",
+    "topic": "Signals & media",
+    "prompt": "Which fiber type has a smaller core and is used for long-distance applications?",
+    "options": [
+      "Single-mode fiber",
+      "Multimode fiber",
+      "Unshielded twisted pair",
+      "Coaxial cable"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes associate single-mode fiber with a very small core and long-distance laser transmission.",
+    "source": {
+      "part": 3,
+      "page": 65
+    }
+  },
+  {
+    "id": "q049",
+    "difficulty": "Medium",
+    "topic": "Encoding & modulation",
+    "prompt": "In the NRZ-I example where a 1 causes inversion, what does a 0 cause?",
+    "options": [
+      "No change in polarity",
+      "A mandatory inversion",
+      "A return to zero halfway through",
+      "Two mid-bit transitions"
+    ],
+    "correctIndex": 0,
+    "explanation": "For the specified NRZ-I convention, a 1 inverts polarity and a 0 does not.",
+    "source": {
+      "part": 4,
+      "page": 12
+    }
+  },
+  {
+    "id": "q050",
+    "difficulty": "Medium",
+    "topic": "Encoding & modulation",
+    "prompt": "Why is the mid-bit transition useful in Manchester encoding?",
+    "options": [
+      "It provides synchronization",
+      "It identifies the IP subnet",
+      "It increases the number of MAC addresses",
+      "It removes the need for a physical medium"
+    ],
+    "correctIndex": 0,
+    "explanation": "Manchester and differential Manchester use the middle transition for clock synchronization.",
+    "source": {
+      "part": 4,
+      "page": 16
+    }
+  },
+  {
+    "id": "q051",
+    "difficulty": "Medium",
+    "topic": "Encoding & modulation",
+    "prompt": "In AMI, how are successive 1 bits represented?",
+    "options": [
+      "Alternating positive and negative voltage",
+      "Always zero voltage",
+      "Always positive voltage",
+      "Increasing frequency for every 1"
+    ],
+    "correctIndex": 0,
+    "explanation": "AMI represents 0 with zero voltage and alternates the polarity of successive 1s.",
+    "source": {
+      "part": 4,
+      "page": 17
+    }
+  },
+  {
+    "id": "q052",
+    "difficulty": "Medium",
+    "topic": "Encoding & modulation",
+    "prompt": "What does 4B/5B block coding do?",
+    "options": [
+      "Replaces each 4-bit group with a 5-bit group",
+      "Replaces each 5-bit group with 4 bits",
+      "Maps 4 bytes to 5 frames",
+      "Removes all redundant bits"
+    ],
+    "correctIndex": 0,
+    "explanation": "In mB/nB coding, an m-bit data group becomes an n-bit coded group.",
+    "source": {
+      "part": 4,
+      "page": 18
+    }
+  },
+  {
+    "id": "q053",
+    "difficulty": "Medium",
+    "topic": "Encoding & modulation",
+    "prompt": "Which order describes PCM conversion?",
+    "options": [
+      "Sampling, quantization, encoding",
+      "Encoding, routing, sampling",
+      "Quantization, framing, routing",
+      "Modulation, routing, decapsulation"
+    ],
+    "correctIndex": 0,
+    "explanation": "PCM samples the analog signal, quantizes sample values, then encodes them as bits.",
+    "source": {
+      "part": 4,
+      "page": 22
+    }
+  },
+  {
+    "id": "q054",
+    "difficulty": "Medium",
+    "topic": "Encoding & modulation",
+    "prompt": "QAM combines which modulation methods?",
+    "options": [
+      "ASK and PSK",
+      "ASK and PCM",
+      "FSK and DM",
+      "PCM and NRZ"
+    ],
+    "correctIndex": 0,
+    "explanation": "Quadrature Amplitude Modulation combines amplitude and phase changes.",
+    "source": {
+      "part": 4,
+      "page": 32
+    }
+  },
+  {
+    "id": "q055",
+    "difficulty": "Medium",
+    "topic": "Error control",
+    "prompt": "The first damaged bit is position 3 and the last is position 8. What is the burst length?",
+    "options": [
+      "6 bits",
+      "5 bits",
+      "8 bits",
+      "3 bits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Burst length includes both endpoints and any undamaged bits between them: 8 - 3 + 1 = 6.",
+    "source": {
+      "part": 5,
+      "page": 5
+    }
+  },
+  {
+    "id": "q056",
+    "difficulty": "Medium",
+    "topic": "Error control",
+    "prompt": "How does forward error correction differ from retransmission?",
+    "options": [
+      "The receiver uses redundancy to recover the message",
+      "The receiver always asks for a new copy",
+      "The sender removes the checksum",
+      "It requires no redundant information"
+    ],
+    "correctIndex": 0,
+    "explanation": "FEC attempts recovery using redundant bits; retransmission asks the sender to resend.",
+    "source": {
+      "part": 5,
+      "page": 7
+    }
+  },
+  {
+    "id": "q057",
+    "difficulty": "Medium",
+    "topic": "Error control",
+    "prompt": "What can a simple parity-check code guarantee?",
+    "options": [
+      "Detection of a single-bit error",
+      "Correction of every single-bit error",
+      "Detection of every two-bit error",
+      "Correction of all burst errors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Simple parity adds one bit and detects a single-bit error, but cannot correct it.",
+    "source": {
+      "part": 5,
+      "page": 16
+    }
+  },
+  {
+    "id": "q058",
+    "difficulty": "Medium",
+    "topic": "Error control",
+    "prompt": "With a degree-4 CRC generator, how many zeros are appended before division?",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "8"
+    ],
+    "correctIndex": 0,
+    "explanation": "The CRC procedure appends r zero bits when the generator degree is r.",
+    "source": {
+      "part": 5,
+      "page": 24
+    }
+  },
+  {
+    "id": "q059",
+    "difficulty": "Medium",
+    "topic": "Error control",
+    "prompt": "A CRC receiver finds a nonzero division remainder. What does this indicate?",
+    "options": [
+      "An error is detected",
+      "The packet is certainly correct",
+      "The message is automatically corrected",
+      "The generator must have degree zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "A nonzero remainder means the received sequence fails the CRC divisibility check.",
+    "source": {
+      "part": 5,
+      "page": 25
+    }
+  },
+  {
+    "id": "q060",
+    "difficulty": "Medium",
+    "topic": "Link layer & access",
+    "prompt": "Why is byte stuffing used?",
+    "options": [
+      "To keep a flag-like byte in payload from being mistaken for a delimiter",
+      "To increase IP address space",
+      "To correct every bit error",
+      "To make all frames the same size"
+    ],
+    "correctIndex": 0,
+    "explanation": "A special escape byte protects payload bytes that match the frame flag pattern.",
+    "source": {
+      "part": 6,
+      "page": 7
+    }
+  },
+  {
+    "id": "q061",
+    "difficulty": "Medium",
+    "topic": "Link layer & access",
+    "prompt": "Which mechanism prevents a flag-like bit pattern in payload from being interpreted as a frame boundary?",
+    "options": [
+      "Bit stuffing",
+      "IP fragmentation",
+      "Subnetting",
+      "Frequency shifting"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bit-oriented framing stuffs an extra 0 after the specified run of five 1s.",
+    "source": {
+      "part": 6,
+      "page": 8
+    }
+  },
+  {
+    "id": "q062",
+    "difficulty": "Medium",
+    "topic": "Link layer & access",
+    "prompt": "Which destination MAC address in the notes is broadcast?",
+    "options": [
+      "FF:FF:FF:FF:FF:FF",
+      "4A:30:10:21:10:1A",
+      "47:20:1B:2E:08:EE",
+      "00:1B:21:2E:4F:6A"
+    ],
+    "correctIndex": 0,
+    "explanation": "The all-ones Ethernet destination address is broadcast.",
+    "source": {
+      "part": 6,
+      "page": 14
+    }
+  },
+  {
+    "id": "q063",
+    "difficulty": "Medium",
+    "topic": "Link layer & access",
+    "prompt": "When may a slotted ALOHA station begin transmitting?",
+    "options": [
+      "At the start of a time slot",
+      "At any instant within a slot",
+      "Only after a router assigns a port",
+      "Only after receiving a DHCP lease"
+    ],
+    "correctIndex": 0,
+    "explanation": "Slotted ALOHA restricts transmission starts to slot boundaries.",
+    "source": {
+      "part": 6,
+      "page": 26
+    }
+  },
+  {
+    "id": "q064",
+    "difficulty": "Medium",
+    "topic": "Link layer & access",
+    "prompt": "Why can collisions still occur with CSMA?",
+    "options": [
+      "Propagation delay means a distant transmission may not yet be sensed",
+      "Carrier sensing always detects future transmissions",
+      "MAC addresses are only 16 bits",
+      "CSMA requires all stations to send together"
+    ],
+    "correctIndex": 0,
+    "explanation": "Two stations can sense an idle medium before either signal reaches the other.",
+    "source": {
+      "part": 6,
+      "page": 29
+    }
+  },
+  {
+    "id": "q065",
+    "difficulty": "Medium",
+    "topic": "IP & subnetting",
+    "prompt": "Which prefix length corresponds to 255.255.255.192?",
+    "options": [
+      "/26",
+      "/24",
+      "/25",
+      "/27"
+    ],
+    "correctIndex": 0,
+    "explanation": "There are 24 leading 1s in the first three octets plus two in the last octet.",
+    "source": {
+      "part": 7,
+      "page": 11
+    }
+  },
+  {
+    "id": "q066",
+    "difficulty": "Medium",
+    "topic": "IP & subnetting",
+    "prompt": "Which listed IPv4 address belongs to the private ranges in the notes?",
+    "options": [
+      "172.20.5.8",
+      "172.32.5.8",
+      "192.169.1.8",
+      "11.0.0.8"
+    ],
+    "correctIndex": 0,
+    "explanation": "172.20.5.8 falls inside 172.16.0.0/12, whose second octet ranges from 16 to 31.",
+    "source": {
+      "part": 7,
+      "page": 28
+    }
+  },
+  {
+    "id": "q067",
+    "difficulty": "Medium",
+    "topic": "IP & subnetting",
+    "prompt": "What happens when a router decrements an IPv4 packet's TTL to zero?",
+    "options": [
+      "It drops the packet and notifies the sender using ICMP",
+      "It resets TTL to 255",
+      "It broadcasts the packet on every interface",
+      "It changes the packet into a TCP ACK"
+    ],
+    "correctIndex": 0,
+    "explanation": "TTL limits packet lifetime in hops and prevents indefinite routing loops.",
+    "source": {
+      "part": 7,
+      "page": 56
+    }
+  },
+  {
+    "id": "q068",
+    "difficulty": "Hard",
+    "topic": "Foundations",
+    "prompt": "A full mesh has 8 devices with full-duplex links. How many links and ports per device are required?",
+    "options": [
+      "28 links; 7 ports per device",
+      "56 links; 8 ports per device",
+      "16 links; 2 ports per device",
+      "8 links; 7 ports per device"
+    ],
+    "correctIndex": 0,
+    "explanation": "A full mesh needs n(n - 1)/2 links and n - 1 ports per device: 28 and 7.",
+    "source": {
+      "part": 1,
+      "page": 23
+    }
+  },
+  {
+    "id": "q069",
+    "difficulty": "Hard",
+    "topic": "Foundations",
+    "prompt": "Assume a 30-day month with two equally spaced failures per month and a mean repair time of 30 minutes. Using availability = MTBF/(MTBF + MTTR), what is availability approximately?",
+    "options": [
+      "99.86%",
+      "98.00%",
+      "50.00%",
+      "95.24%"
+    ],
+    "correctIndex": 0,
+    "explanation": "MTBF = 15 days = 21,600 minutes. Availability = 21,600 / 21,630 ≈ 99.86%.",
+    "source": {
+      "part": 1,
+      "page": 18
+    }
+  },
+  {
+    "id": "q070",
+    "difficulty": "Hard",
+    "topic": "Models & addressing",
+    "prompt": "A packet crosses several LANs without address translation. Which addresses usually change at each hop while the others remain the same?",
+    "options": [
+      "Physical addresses change; logical and port addresses remain",
+      "Logical addresses change; physical addresses remain",
+      "Port addresses change; logical addresses remain",
+      "All addresses must change every hop"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes distinguish local physical addressing from logical and process addressing across the path.",
+    "source": {
+      "part": 2,
+      "page": 9
+    }
+  },
+  {
+    "id": "q071",
+    "difficulty": "Hard",
+    "topic": "Models & addressing",
+    "prompt": "Which mapping of delivery scope to layer is correct?",
+    "options": [
+      "Data Link: hop-to-hop; Network: host-to-host; Transport: process-to-process",
+      "Data Link: process-to-process; Network: hop-to-hop; Transport: host-to-host",
+      "Physical: process-to-process; Session: host-to-host; Network: hop-to-hop",
+      "Transport: hop-to-hop; Data Link: host-to-host; Physical: process-to-process"
+    ],
+    "correctIndex": 0,
+    "explanation": "Part 2 assigns frames to hop delivery, packets to source-host/destination-host delivery, and transport segments to processes (pp. 4-5).",
+    "source": {
+      "part": 2,
+      "page": 4
+    }
+  },
+  {
+    "id": "q072",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "A noiseless channel has bandwidth 3 kHz and 4 signal levels. What is the Nyquist maximum bit rate?",
+    "options": [
+      "12 kbps",
+      "6 kbps",
+      "24 kbps",
+      "3 kbps"
+    ],
+    "correctIndex": 0,
+    "explanation": "C = 2B log2(L) = 2 × 3000 × 2 = 12,000 bps.",
+    "source": {
+      "part": 3,
+      "page": 41
+    }
+  },
+  {
+    "id": "q073",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "A channel has bandwidth 1 MHz and linear SNR 63. What is its Shannon capacity?",
+    "options": [
+      "6 Mbps",
+      "63 Mbps",
+      "64 Mbps",
+      "2 Mbps"
+    ],
+    "correctIndex": 0,
+    "explanation": "C = B log2(1 + SNR) = 1,000,000 × log2(64) = 6 Mbps.",
+    "source": {
+      "part": 3,
+      "page": 44
+    }
+  },
+  {
+    "id": "q074",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "Signal power is 10 mW and noise power is 1 μW. What are linear SNR and SNR in dB?",
+    "options": [
+      "10,000 and 40 dB",
+      "10 and 10 dB",
+      "1000 and 20 dB",
+      "100 and 40 dB"
+    ],
+    "correctIndex": 0,
+    "explanation": "Convert 10 mW to 10,000 μW. SNR = 10,000, and 10 log10(10,000) = 40 dB.",
+    "source": {
+      "part": 3,
+      "page": 39
+    }
+  },
+  {
+    "id": "q075",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "A signal's output power is half its input power. What is 10 log10(Pout/Pin) approximately?",
+    "options": [
+      "-3 dB",
+      "+3 dB",
+      "-10 dB",
+      "+10 dB"
+    ],
+    "correctIndex": 0,
+    "explanation": "10 log10(0.5) ≈ -3.01 dB, a loss of about 3 dB.",
+    "source": {
+      "part": 3,
+      "page": 32
+    }
+  },
+  {
+    "id": "q076",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "A link is 12,000 km long with propagation speed 2.4 × 10^8 m/s. What is the one-way propagation delay?",
+    "options": [
+      "50 ms",
+      "5 ms",
+      "0.05 ms",
+      "500 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Convert distance to 12,000,000 m, then divide by 240,000,000 m/s to get 0.05 s.",
+    "source": {
+      "part": 3,
+      "page": 53
+    }
+  },
+  {
+    "id": "q077",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "A 2,500-byte message is sent at 1 Gbps. What is its transmission delay?",
+    "options": [
+      "20 μs",
+      "20 ms",
+      "2.5 μs",
+      "50 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "Transmission delay = 2500 × 8 / 10^9 = 0.000020 s = 20 μs.",
+    "source": {
+      "part": 3,
+      "page": 55
+    }
+  },
+  {
+    "id": "q078",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "A link rate is 2 Mbps and one-way propagation delay is 50 ms. How many bits fill the link?",
+    "options": [
+      "100,000 bits",
+      "40,000 bits",
+      "100 bits",
+      "10,000,000 bits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bandwidth-delay product = 2,000,000 × 0.05 = 100,000 bits.",
+    "source": {
+      "part": 3,
+      "page": 56
+    }
+  },
+  {
+    "id": "q079",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "Link A spans 100-200 MHz and link B spans 5.0-5.1 GHz. With equal SNR, how do their Shannon capacities compare?",
+    "options": [
+      "They are equal",
+      "A is twice B",
+      "B is 50 times A",
+      "B must be lower"
+    ],
+    "correctIndex": 0,
+    "explanation": "Both links have a bandwidth of 100 MHz, so equal SNR gives equal B log2(1 + SNR).",
+    "source": {
+      "part": 3,
+      "page": 72
+    }
+  },
+  {
+    "id": "q080",
+    "difficulty": "Hard",
+    "topic": "Signals & media",
+    "prompt": "A packet of P bits crosses two store-and-forward links of rates B and 2B and propagation delays D and D/2. Ignoring other delays, when does the last bit arrive?",
+    "options": [
+      "3P/(2B) + 3D/2",
+      "P/(2B) + D/2",
+      "P/B + D",
+      "2P/B + 2D"
+    ],
+    "correctIndex": 0,
+    "explanation": "Store-and-forward adds both transmission delays and both propagation delays: P/B + P/(2B) + D + D/2.",
+    "source": {
+      "part": 3,
+      "page": 74
+    }
+  },
+  {
+    "id": "q081",
+    "difficulty": "Hard",
+    "topic": "Encoding & modulation",
+    "prompt": "A 0-4 kHz voice signal is sampled at twice its highest frequency with 8 bits per sample. What PCM bit rate results?",
+    "options": [
+      "64 kbps",
+      "32 kbps",
+      "8 kbps",
+      "4 kbps"
+    ],
+    "correctIndex": 0,
+    "explanation": "Sampling rate is 8000 samples/s; 8000 × 8 = 64,000 bps.",
+    "source": {
+      "part": 4,
+      "page": 24
+    }
+  },
+  {
+    "id": "q082",
+    "difficulty": "Hard",
+    "topic": "Encoding & modulation",
+    "prompt": "Using S = cN/r, what is the signal rate for N = 100 kbps, c = 0.5, and r = 1?",
+    "options": [
+      "50 kbaud",
+      "100 kbaud",
+      "200 kbaud",
+      "25 kbaud"
+    ],
+    "correctIndex": 0,
+    "explanation": "S = 0.5 × 100,000 / 1 = 50,000 baud.",
+    "source": {
+      "part": 4,
+      "page": 8
+    }
+  },
+  {
+    "id": "q083",
+    "difficulty": "Hard",
+    "topic": "Encoding & modulation",
+    "prompt": "4B/5B encoding is applied to 400 data bits. How many coded bits result?",
+    "options": [
+      "500 bits",
+      "320 bits",
+      "405 bits",
+      "800 bits"
+    ],
+    "correctIndex": 0,
+    "explanation": "There are 400/4 = 100 groups, each replaced by five bits, giving 500 bits.",
+    "source": {
+      "part": 4,
+      "page": 19
+    }
+  },
+  {
+    "id": "q084",
+    "difficulty": "Hard",
+    "topic": "Encoding & modulation",
+    "prompt": "Under the notes' minimum-bandwidth comparison, if NRZ needs 250 kHz, how much does Manchester need?",
+    "options": [
+      "500 kHz",
+      "125 kHz",
+      "250 kHz",
+      "1000 kHz"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes state Manchester and differential Manchester require twice the minimum bandwidth of NRZ.",
+    "source": {
+      "part": 4,
+      "page": 16
+    }
+  },
+  {
+    "id": "q085",
+    "difficulty": "Hard",
+    "topic": "Encoding & modulation",
+    "prompt": "A receiver clock is 0.1% faster than the sender at 1 Mbps. How many extra bits per second does it count in the notes' example?",
+    "options": [
+      "1000",
+      "1",
+      "100",
+      "10,000"
+    ],
+    "correctIndex": 0,
+    "explanation": "0.1% = 0.001; 1,000,000 × 0.001 = 1000 extra bits per second.",
+    "source": {
+      "part": 4,
+      "page": 36
+    }
+  },
+  {
+    "id": "q086",
+    "difficulty": "Hard",
+    "topic": "Error control",
+    "prompt": "What is the Hamming distance between 10101 and 11110?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "correctIndex": 0,
+    "explanation": "Positions 2, 4, and 5 differ, so the distance is 3.",
+    "source": {
+      "part": 5,
+      "page": 10
+    }
+  },
+  {
+    "id": "q087",
+    "difficulty": "Hard",
+    "topic": "Error control",
+    "prompt": "A block code has minimum Hamming distance 4. What can it guarantee?",
+    "options": [
+      "Detect up to 3 errors or correct up to 1 error",
+      "Detect 4 errors or correct 2 errors",
+      "Detect 2 errors or correct 3 errors",
+      "Correct 4 errors"
+    ],
+    "correctIndex": 0,
+    "explanation": "Detection needs dmin ≥ s + 1; correction needs dmin ≥ 2t + 1. Here s = 3 and t = 1.",
+    "source": {
+      "part": 5,
+      "page": 15
+    }
+  },
+  {
+    "id": "q088",
+    "difficulty": "Hard",
+    "topic": "Error control",
+    "prompt": "What minimum Hamming distance is needed to guarantee correction of two bit errors?",
+    "options": [
+      "5",
+      "2",
+      "3",
+      "4"
+    ],
+    "correctIndex": 0,
+    "explanation": "For t = 2, the correction condition is dmin ≥ 2t + 1 = 5.",
+    "source": {
+      "part": 5,
+      "page": 14
+    }
+  },
+  {
+    "id": "q089",
+    "difficulty": "Hard",
+    "topic": "Error control",
+    "prompt": "Using even parity with one appended parity bit, what codeword is produced for dataword 1011?",
+    "options": [
+      "10111",
+      "10110",
+      "01011",
+      "10101"
+    ],
+    "correctIndex": 0,
+    "explanation": "1011 has three 1s, so appending 1 makes the total number of 1s even.",
+    "source": {
+      "part": 5,
+      "page": 16
+    }
+  },
+  {
+    "id": "q090",
+    "difficulty": "Hard",
+    "topic": "Error control",
+    "prompt": "With message 1101011011 and generator 10011, which CRC codeword is shown in the notes?",
+    "options": [
+      "11010110111110",
+      "11010110110000",
+      "11010110111001",
+      "11010110110111"
+    ],
+    "correctIndex": 0,
+    "explanation": "After appending four zeros and modulo-2 division, the remainder is 1110, which is appended to the message.",
+    "source": {
+      "part": 5,
+      "page": 25
+    }
+  },
+  {
+    "id": "q091",
+    "difficulty": "Hard",
+    "topic": "Error control",
+    "prompt": "Using 4-bit one's-complement arithmetic, what checksum accompanies the numbers 7, 11, 12, 0, and 6?",
+    "options": [
+      "9",
+      "4",
+      "6",
+      "15"
+    ],
+    "correctIndex": 0,
+    "explanation": "The ordinary sum is 36 = 100100₂. Wrap the overflow: 0100 + 0010 = 0110 (6). Complement 0110 to get 1001 (9).",
+    "source": {
+      "part": 5,
+      "page": 33
+    }
+  },
+  {
+    "id": "q092",
+    "difficulty": "Hard",
+    "topic": "Link layer & access",
+    "prompt": "How is payload pattern 01111110 transformed by the bit-stuffing rule in the notes?",
+    "options": [
+      "011111010",
+      "011111100",
+      "001111110",
+      "01111110 unchanged"
+    ],
+    "correctIndex": 0,
+    "explanation": "Insert an extra 0 after the first five consecutive 1s, preventing the payload from matching the flag.",
+    "source": {
+      "part": 6,
+      "page": 8
+    }
+  },
+  {
+    "id": "q093",
+    "difficulty": "Hard",
+    "topic": "Link layer & access",
+    "prompt": "For shared-medium CSMA/CD, R = 1 Gbps, distance = 1000 m, and propagation speed = 2 × 10^8 m/s. What minimum packet size keeps transmission active for a round trip?",
+    "options": [
+      "10,000 bits",
+      "1000 bits",
+      "5000 bits",
+      "100,000 bits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Round-trip delay = 2 × 1000 / (2 × 10^8) = 10 μs. Minimum size = R × delay = 10,000 bits.",
+    "source": {
+      "part": 6,
+      "page": 38
+    }
+  },
+  {
+    "id": "q094",
+    "difficulty": "Hard",
+    "topic": "IP & subnetting",
+    "prompt": "How many usable host addresses are available in a /26 subnet using the course formula?",
+    "options": [
+      "62",
+      "64",
+      "126",
+      "30"
+    ],
+    "correctIndex": 0,
+    "explanation": "There are 32 - 26 = 6 host bits, so 2^6 - 2 = 62 usable hosts.",
+    "source": {
+      "part": 7,
+      "page": 21
+    }
+  },
+  {
+    "id": "q095",
+    "difficulty": "Hard",
+    "topic": "IP & subnetting",
+    "prompt": "You must divide a /24 into equal subnets for 7 departments, each needing 29 usable hosts. Which prefix meets both requirements?",
+    "options": [
+      "/27",
+      "/26",
+      "/28",
+      "/25"
+    ],
+    "correctIndex": 0,
+    "explanation": "Borrowing 3 bits gives 8 subnets; 5 host bits give 30 usable hosts per subnet.",
+    "source": {
+      "part": 7,
+      "page": 23
+    }
+  },
+  {
+    "id": "q096",
+    "difficulty": "Hard",
+    "topic": "IP & subnetting",
+    "prompt": "What is the network address of 192.168.10.77/26?",
+    "options": [
+      "192.168.10.64",
+      "192.168.10.0",
+      "192.168.10.76",
+      "192.168.10.128"
+    ],
+    "correctIndex": 0,
+    "explanation": "AND with 255.255.255.192. The /26 block containing 77 runs from 64 to 127, with network address 64.",
+    "source": {
+      "part": 7,
+      "page": 10
+    }
+  },
+  {
+    "id": "q097",
+    "difficulty": "Hard",
+    "topic": "IP & subnetting",
+    "prompt": "What is the broadcast address of 192.168.10.64/26?",
+    "options": [
+      "192.168.10.127",
+      "192.168.10.126",
+      "192.168.10.255",
+      "192.168.10.65"
+    ],
+    "correctIndex": 0,
+    "explanation": "A /26 contains 64 addresses. The block starts at 64 and ends at 127; all host bits are 1 at the broadcast address.",
+    "source": {
+      "part": 7,
+      "page": 11
+    }
+  },
+  {
+    "id": "q098",
+    "difficulty": "Hard",
+    "topic": "IP & subnetting",
+    "prompt": "An IPv4 header has HLEN = 1000₂. How many option bytes does it contain?",
+    "options": [
+      "12 bytes",
+      "8 bytes",
+      "20 bytes",
+      "32 bytes"
+    ],
+    "correctIndex": 0,
+    "explanation": "HLEN is 8 four-byte words, or 32 bytes total. Subtract the 20-byte base header to get 12 option bytes.",
+    "source": {
+      "part": 7,
+      "page": 47
+    }
+  },
+  {
+    "id": "q099",
+    "difficulty": "Hard",
+    "topic": "IP & subnetting",
+    "prompt": "A 4000-byte IPv4 datagram with a 20-byte header crosses an MTU of 1500 bytes. Which total fragment lengths result?",
+    "options": [
+      "1500, 1500, 1040 bytes",
+      "1500, 1500, 1000 bytes",
+      "1480, 1480, 1020 bytes",
+      "1500, 1040 bytes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Payload is 3980 bytes. Each full fragment carries 1480 bytes; the remainder is 1020 bytes plus a 20-byte header.",
+    "source": {
+      "part": 7,
+      "page": 52
+    }
+  },
+  {
+    "id": "q100",
+    "difficulty": "Hard",
+    "topic": "IP & subnetting",
+    "prompt": "In the 4000-byte datagram example (20-byte header, MTU 1500), what are the fragment offset values?",
+    "options": [
+      "0, 185, 370",
+      "0, 1480, 2960",
+      "0, 1500, 3000",
+      "0, 1, 2"
+    ],
+    "correctIndex": 0,
+    "explanation": "Offsets are in eight-byte units. Each full fragment carries 1480 bytes, so increments are 1480/8 = 185.",
+    "source": {
+      "part": 7,
+      "page": 52
+    }
+  }
+]

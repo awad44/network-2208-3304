@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "q001",
+    "difficulty": "Normal",
+    "topic": "Network basics",
+    "prompt": "What is a main advantage of layering in a network architecture?",
+    "options": [
+      "It divides complex communication into manageable parts",
+      "It eliminates every header",
+      "It replaces all protocols with one cable",
+      "It prevents all packet loss"
+    ],
+    "correctIndex": 0,
+    "explanation": "Layering gives an explicit structure and allows individual layers to be implemented and maintained separately.",
+    "source": {
+      "part": "1",
+      "page": 12
+    }
+  },
+  {
+    "id": "q002",
+    "difficulty": "Normal",
+    "topic": "Network basics",
+    "prompt": "Which layer transmits individual bits from one node to the next?",
+    "options": [
+      "Physical",
+      "Network",
+      "Transport",
+      "Application"
+    ],
+    "correctIndex": 0,
+    "explanation": "The physical layer handles individual bits across a link.",
+    "source": {
+      "part": "1",
+      "page": 26
+    }
+  },
+  {
+    "id": "q003",
+    "difficulty": "Normal",
+    "topic": "Network basics",
+    "prompt": "Which layer transmits frames between neighboring nodes?",
+    "options": [
+      "Data Link",
+      "Transport",
+      "Application",
+      "Presentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "The data link layer delivers frames from one node to the next.",
+    "source": {
+      "part": "1",
+      "page": 29
+    }
+  },
+  {
+    "id": "q004",
+    "difficulty": "Normal",
+    "topic": "Network basics",
+    "prompt": "Which layer delivers packets from the original source host to the destination host?",
+    "options": [
+      "Network",
+      "Physical",
+      "Session",
+      "Presentation"
+    ],
+    "correctIndex": 0,
+    "explanation": "Source-to-destination packet delivery is the network layer's responsibility.",
+    "source": {
+      "part": "1",
+      "page": 33
+    }
+  },
+  {
+    "id": "q005",
+    "difficulty": "Normal",
+    "topic": "Network basics",
+    "prompt": "What mapping is stored in an ARP table?",
+    "options": [
+      "IP address to MAC address",
+      "Domain name to mail subject",
+      "TCP sequence number to file name",
+      "Routing metric to encryption key"
+    ],
+    "correctIndex": 0,
+    "explanation": "An ARP table stores IP/MAC address mappings for LAN nodes, with a lifetime.",
+    "source": {
+      "part": "1",
+      "page": 53
+    }
+  },
+  {
+    "id": "q006",
+    "difficulty": "Normal",
+    "topic": "Static routing",
+    "prompt": "How is a static route learned by a router?",
+    "options": [
+      "An administrator manually configures it",
+      "A DNS server supplies it in an A record",
+      "A TCP receiver advertises it as rwnd",
+      "A host's browser generates it automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "Static routes are manually entered; dynamic routing protocols learn remote routes automatically.",
+    "source": {
+      "part": "2",
+      "page": 51
+    }
+  },
+  {
+    "id": "q007",
+    "difficulty": "Normal",
+    "topic": "Static routing",
+    "prompt": "Which Cisco command displays the IPv4 routing table?",
+    "options": [
+      "show ip route",
+      "show tcp checksum",
+      "show dns record",
+      "show arp signature"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes identify show ip route as the command used to display the routing table.",
+    "source": {
+      "part": "2",
+      "page": 45
+    }
+  },
+  {
+    "id": "q008",
+    "difficulty": "Normal",
+    "topic": "Static routing",
+    "prompt": "Which IPv4 prefix represents a default static route?",
+    "options": [
+      "0.0.0.0/0",
+      "255.255.255.255/32",
+      "127.0.0.0/8",
+      "10.0.0.0/24"
+    ],
+    "correctIndex": 0,
+    "explanation": "A default route uses 0.0.0.0/0 and is used when no more specific route matches.",
+    "source": {
+      "part": "2",
+      "page": 56
+    }
+  },
+  {
+    "id": "q009",
+    "difficulty": "Normal",
+    "topic": "Static routing",
+    "prompt": "Which metric does RIP use?",
+    "options": [
+      "Hop count",
+      "Message digest length",
+      "TCP receive window",
+      "HTTP response code"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes list hop count as RIP's routing metric.",
+    "source": {
+      "part": "2",
+      "page": 40
+    }
+  },
+  {
+    "id": "q010",
+    "difficulty": "Normal",
+    "topic": "Static routing",
+    "prompt": "Where is the routing table stored according to the notes?",
+    "options": [
+      "RAM",
+      "Only in the DNS cache",
+      "Only in Ethernet preambles",
+      "Only on the ISP's website"
+    ],
+    "correctIndex": 0,
+    "explanation": "The routing table is stored in RAM and contains directly connected and remote routes.",
+    "source": {
+      "part": "2",
+      "page": 44
+    }
+  },
+  {
+    "id": "q011",
+    "difficulty": "Normal",
+    "topic": "Dynamic routing",
+    "prompt": "Which algorithm is associated with link-state least-cost routing?",
+    "options": [
+      "Dijkstra's algorithm",
+      "AES encryption",
+      "TCP fast retransmit",
+      "ARP broadcasting"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dijkstra's algorithm computes least-cost paths using topology and link-cost information.",
+    "source": {
+      "part": "3",
+      "page": 18
+    }
+  },
+  {
+    "id": "q012",
+    "difficulty": "Normal",
+    "topic": "Dynamic routing",
+    "prompt": "Which equation underlies distance-vector routing?",
+    "options": [
+      "Bellman-Ford equation",
+      "TCP checksum equation only",
+      "HTTP response-time equation",
+      "AES key expansion"
+    ],
+    "correctIndex": 0,
+    "explanation": "Distance-vector updates use the Bellman-Ford minimum over neighbors.",
+    "source": {
+      "part": "3",
+      "page": 26
+    }
+  },
+  {
+    "id": "q013",
+    "difficulty": "Normal",
+    "topic": "Dynamic routing",
+    "prompt": "What is an autonomous system (AS)?",
+    "options": [
+      "A group of routers under the same administrative control",
+      "One TCP segment",
+      "A type of physical cable",
+      "A DNS record containing a password"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes organize Internet routers into autonomous systems with common administrative control.",
+    "source": {
+      "part": "3",
+      "page": 52
+    }
+  },
+  {
+    "id": "q014",
+    "difficulty": "Normal",
+    "topic": "Dynamic routing",
+    "prompt": "OSPF belongs to which routing family?",
+    "options": [
+      "Link-state",
+      "Distance-vector only",
+      "Transport flow control",
+      "Application-layer caching"
+    ],
+    "correctIndex": 0,
+    "explanation": "OSPF floods link-state information and uses Dijkstra's algorithm.",
+    "source": {
+      "part": "3",
+      "page": 62
+    }
+  },
+  {
+    "id": "q015",
+    "difficulty": "Normal",
+    "topic": "Dynamic routing",
+    "prompt": "Which protocol provides inter-domain routing between autonomous systems?",
+    "options": [
+      "BGP",
+      "ARP",
+      "POP3",
+      "FTP"
+    ],
+    "correctIndex": 0,
+    "explanation": "BGP is the inter-AS routing protocol described in the notes.",
+    "source": {
+      "part": "3",
+      "page": 66
+    }
+  },
+  {
+    "id": "q016",
+    "difficulty": "Normal",
+    "topic": "NAT & IPv6",
+    "prompt": "What does NAT stand for?",
+    "options": [
+      "Network Address Translation",
+      "Network Authentication Timer",
+      "Next Application Transfer",
+      "Node Access Token"
+    ],
+    "correctIndex": 0,
+    "explanation": "NAT translates address information so local devices can share a public IPv4 address in the illustrated design.",
+    "source": {
+      "part": "4",
+      "page": 7
+    }
+  },
+  {
+    "id": "q017",
+    "difficulty": "Normal",
+    "topic": "NAT & IPv6",
+    "prompt": "Which listed prefix is a private IPv4 range?",
+    "options": [
+      "10.0.0.0/8",
+      "11.0.0.0/8",
+      "138.76.29.0/24",
+      "128.119.40.0/24"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes list 10/8, 172.16/12, and 192.168/16 as private ranges.",
+    "source": {
+      "part": "4",
+      "page": 8
+    }
+  },
+  {
+    "id": "q018",
+    "difficulty": "Normal",
+    "topic": "NAT & IPv6",
+    "prompt": "How long is an IPv6 address?",
+    "options": [
+      "128 bits",
+      "32 bits",
+      "48 bits",
+      "64 bits"
+    ],
+    "correctIndex": 0,
+    "explanation": "Both source and destination IPv6 address fields contain 128 bits.",
+    "source": {
+      "part": "4",
+      "page": 14
+    }
+  },
+  {
+    "id": "q019",
+    "difficulty": "Normal",
+    "topic": "NAT & IPv6",
+    "prompt": "What is the size of the fixed IPv6 base header?",
+    "options": [
+      "40 bytes",
+      "20 bytes",
+      "8 bytes",
+      "128 bytes"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IPv6 base header has a fixed length of 40 bytes.",
+    "source": {
+      "part": "4",
+      "page": 13
+    }
+  },
+  {
+    "id": "q020",
+    "difficulty": "Normal",
+    "topic": "Transport & TCP",
+    "prompt": "Transport protocols provide logical communication between what?",
+    "options": [
+      "Application processes on different hosts",
+      "Only two physical cable ends",
+      "Only neighboring Ethernet switches",
+      "Only DNS root servers"
+    ],
+    "correctIndex": 0,
+    "explanation": "The transport layer connects application processes and handles segmentation and reassembly at end systems.",
+    "source": {
+      "part": "5",
+      "page": 8
+    }
+  },
+  {
+    "id": "q021",
+    "difficulty": "Normal",
+    "topic": "Transport & TCP",
+    "prompt": "Which transport protocol provides reliable, in-order delivery?",
+    "options": [
+      "TCP",
+      "UDP",
+      "ARP",
+      "IP alone"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes list reliable in-order delivery, flow control, congestion control, and connection setup as TCP services.",
+    "source": {
+      "part": "5",
+      "page": 9
+    }
+  },
+  {
+    "id": "q022",
+    "difficulty": "Normal",
+    "topic": "Transport & TCP",
+    "prompt": "Which statement describes UDP?",
+    "options": [
+      "It is connectionless and has no handshake",
+      "It always establishes a three-way handshake",
+      "It guarantees arrival order",
+      "It guarantees a minimum bandwidth"
+    ],
+    "correctIndex": 0,
+    "explanation": "UDP handles segments independently and performs no connection establishment.",
+    "source": {
+      "part": "5",
+      "page": 24
+    }
+  },
+  {
+    "id": "q023",
+    "difficulty": "Normal",
+    "topic": "Transport & TCP",
+    "prompt": "A TCP segment's sequence number counts what?",
+    "options": [
+      "Bytes in the data stream",
+      "Router interfaces",
+      "HTTP objects only",
+      "Whole segments only"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCP sequence numbers refer to byte positions, not segment counts.",
+    "source": {
+      "part": "5",
+      "page": 40
+    }
+  },
+  {
+    "id": "q024",
+    "difficulty": "Normal",
+    "topic": "Transport & TCP",
+    "prompt": "What does the TCP receive window advertise?",
+    "options": [
+      "Available receiver buffer space",
+      "The shortest AS path",
+      "The number of DNS servers",
+      "The cipher key size"
+    ],
+    "correctIndex": 0,
+    "explanation": "The receiver uses rwnd to advertise free buffer space and limit unacknowledged data.",
+    "source": {
+      "part": "5",
+      "page": 62
+    }
+  },
+  {
+    "id": "q025",
+    "difficulty": "Normal",
+    "topic": "Application protocols",
+    "prompt": "Which protocol is used for Web client/server requests and responses?",
+    "options": [
+      "HTTP",
+      "ARP",
+      "RIP",
+      "ICMP"
+    ],
+    "correctIndex": 0,
+    "explanation": "HTTP is the Web application-layer protocol described in Part 6.",
+    "source": {
+      "part": "6",
+      "page": 25
+    }
+  },
+  {
+    "id": "q026",
+    "difficulty": "Normal",
+    "topic": "Application protocols",
+    "prompt": "What does HTTP status 404 mean?",
+    "options": [
+      "Requested document not found on the server",
+      "Request succeeded",
+      "Object moved permanently",
+      "TCP connection accepted"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes define 404 Not Found as a missing requested document.",
+    "source": {
+      "part": "6",
+      "page": 36
+    }
+  },
+  {
+    "id": "q027",
+    "difficulty": "Normal",
+    "topic": "Application protocols",
+    "prompt": "Which TCP port is used for FTP control commands?",
+    "options": [
+      "21",
+      "80",
+      "25",
+      "179"
+    ],
+    "correctIndex": 0,
+    "explanation": "FTP uses port 21 for its control connection.",
+    "source": {
+      "part": "6",
+      "page": 55
+    }
+  },
+  {
+    "id": "q028",
+    "difficulty": "Normal",
+    "topic": "Application protocols",
+    "prompt": "Which protocol transfers email between mail servers?",
+    "options": [
+      "SMTP",
+      "ARP",
+      "OSPF",
+      "DHCP"
+    ],
+    "correctIndex": 0,
+    "explanation": "SMTP transfers email over TCP, using port 25 in the notes' scenario.",
+    "source": {
+      "part": "6",
+      "page": 69
+    }
+  },
+  {
+    "id": "q029",
+    "difficulty": "Normal",
+    "topic": "Application protocols",
+    "prompt": "What is DNS's core name-resolution function?",
+    "options": [
+      "Translate hostnames into IP addresses",
+      "Encrypt every IP packet",
+      "Assign TCP sequence numbers",
+      "Replace routing tables"
+    ],
+    "correctIndex": 0,
+    "explanation": "DNS is a distributed application-layer service for name/address translation.",
+    "source": {
+      "part": "6",
+      "page": 81
+    }
+  },
+  {
+    "id": "q030",
+    "difficulty": "Normal",
+    "topic": "Security",
+    "prompt": "Which security service verifies that an entity is who it claims to be?",
+    "options": [
+      "Authentication",
+      "Compression",
+      "Subnetting",
+      "Congestion avoidance"
+    ],
+    "correctIndex": 0,
+    "explanation": "Authentication provides assurance about the communicating entity's identity.",
+    "source": {
+      "part": "7",
+      "page": 14
+    }
+  },
+  {
+    "id": "q031",
+    "difficulty": "Normal",
+    "topic": "Security",
+    "prompt": "Which security service protects against unauthorized disclosure?",
+    "options": [
+      "Confidentiality",
+      "Availability",
+      "Hop-count routing",
+      "Load balancing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Data confidentiality protects information from eavesdropping and unauthorized disclosure.",
+    "source": {
+      "part": "7",
+      "page": 15
+    }
+  },
+  {
+    "id": "q032",
+    "difficulty": "Normal",
+    "topic": "Security",
+    "prompt": "Which service assures that received data has not been improperly altered?",
+    "options": [
+      "Integrity",
+      "NAT translation",
+      "HTTP persistence",
+      "Route summarization"
+    ],
+    "correctIndex": 0,
+    "explanation": "Integrity assures that received data is as sent, without unauthorized modification, insertion, deletion, or replay.",
+    "source": {
+      "part": "7",
+      "page": 15
+    }
+  },
+  {
+    "id": "q033",
+    "difficulty": "Normal",
+    "topic": "Security",
+    "prompt": "Which service protects against a party denying a communication?",
+    "options": [
+      "Non-repudiation",
+      "Multiplexing",
+      "Flow control",
+      "Caching"
+    ],
+    "correctIndex": 0,
+    "explanation": "Non-repudiation provides evidence against denial of sending or receiving a message.",
+    "source": {
+      "part": "7",
+      "page": 16
+    }
+  },
+  {
+    "id": "q034",
+    "difficulty": "Normal",
+    "topic": "Security",
+    "prompt": "In symmetric-key cryptography, what do sender and receiver share?",
+    "options": [
+      "The same secret key",
+      "Only the sender's public key",
+      "Only an IP subnet mask",
+      "Different unrelated secret keys"
+    ],
+    "correctIndex": 0,
+    "explanation": "Symmetric cryptography uses a shared secret key for encryption and decryption.",
+    "source": {
+      "part": "7",
+      "page": 20
+    }
+  },
+  {
+    "id": "q035",
+    "difficulty": "Medium",
+    "topic": "Network basics",
+    "prompt": "A host knows a local destination's IP address but has no ARP entry. What does it send?",
+    "options": [
+      "A broadcast ARP query",
+      "A unicast DNS MX query",
+      "A BGP route withdrawal",
+      "A TCP FIN to every host"
+    ],
+    "correctIndex": 0,
+    "explanation": "The host broadcasts an ARP query containing the target IP; the target replies with its MAC address.",
+    "source": {
+      "part": "1",
+      "page": 54
+    }
+  },
+  {
+    "id": "q036",
+    "difficulty": "Medium",
+    "topic": "Network basics",
+    "prompt": "A host sends a packet to a remote LAN through router R without NAT. Which destination addresses are used on the first hop?",
+    "options": [
+      "Remote host's IP and R's local MAC address",
+      "R's IP and remote host's MAC address",
+      "Remote host's IP and remote host's MAC address",
+      "Host's own IP and broadcast MAC for all traffic"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IP destination is the final host, while the first frame's destination MAC is the next-hop router.",
+    "source": {
+      "part": "1",
+      "page": 63
+    }
+  },
+  {
+    "id": "q037",
+    "difficulty": "Medium",
+    "topic": "Network basics",
+    "prompt": "Which device normally receives a host's packet when the destination is outside the local IP network?",
+    "options": [
+      "The default gateway",
+      "The host's loopback interface",
+      "An arbitrary DNS authoritative server",
+      "Every local printer"
+    ],
+    "correctIndex": 0,
+    "explanation": "Remote traffic is sent to the default gateway for routing beyond the local network.",
+    "source": {
+      "part": "1",
+      "page": 61
+    }
+  },
+  {
+    "id": "q038",
+    "difficulty": "Medium",
+    "topic": "Static routing",
+    "prompt": "When several forwarding entries match a destination, which prefix is used?",
+    "options": [
+      "The longest matching prefix",
+      "The shortest matching prefix",
+      "Always the default prefix",
+      "The prefix with the largest text label"
+    ],
+    "correctIndex": 0,
+    "explanation": "Longest-prefix matching selects the most specific matching address prefix.",
+    "source": {
+      "part": "2",
+      "page": 17
+    }
+  },
+  {
+    "id": "q039",
+    "difficulty": "Medium",
+    "topic": "Static routing",
+    "prompt": "For competing routes to the same prefix from different sources, which administrative distance is preferred?",
+    "options": [
+      "The lowest AD",
+      "The highest AD",
+      "Always AD 255",
+      "AD is ignored in every case"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes use lower administrative distance to prefer one route source over another.",
+    "source": {
+      "part": "2",
+      "page": 42
+    }
+  },
+  {
+    "id": "q040",
+    "difficulty": "Medium",
+    "topic": "Static routing",
+    "prompt": "Why is a floating static route assigned a higher AD than the primary route?",
+    "options": [
+      "So it acts as a backup when the preferred route is lost",
+      "So it always replaces the primary route",
+      "So it matches every destination regardless of prefix",
+      "So it cannot ever be used"
+    ],
+    "correctIndex": 0,
+    "explanation": "A floating route remains unused while the lower-AD primary route is available.",
+    "source": {
+      "part": "2",
+      "page": 59
+    }
+  },
+  {
+    "id": "q041",
+    "difficulty": "Medium",
+    "topic": "Static routing",
+    "prompt": "What identifies a fully specified static route's next hop?",
+    "options": [
+      "Both next-hop IP address and exit interface",
+      "Only an HTTP URL",
+      "Only a DNS alias",
+      "Only a TCP port"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes distinguish next-hop IP only, exit-interface only, and fully specified routes containing both.",
+    "source": {
+      "part": "2",
+      "page": 62
+    }
+  },
+  {
+    "id": "q042",
+    "difficulty": "Medium",
+    "topic": "Static routing",
+    "prompt": "What can a router do with two equal-cost paths to a destination?",
+    "options": [
+      "Perform equal-cost load balancing",
+      "Convert the packet into a DNS query",
+      "Disable both interfaces",
+      "Always reject the destination"
+    ],
+    "correctIndex": 0,
+    "explanation": "The router can use multiple paths with equal metrics to share traffic.",
+    "source": {
+      "part": "2",
+      "page": 41
+    }
+  },
+  {
+    "id": "q043",
+    "difficulty": "Medium",
+    "topic": "Static routing",
+    "prompt": "When does a router use its default route?",
+    "options": [
+      "When no more specific routing-table entry matches",
+      "Before checking every more specific entry",
+      "Only for packets to itself",
+      "Only for packets with TTL zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "The default route represents destinations without another more specific route match.",
+    "source": {
+      "part": "2",
+      "page": 53
+    }
+  },
+  {
+    "id": "q044",
+    "difficulty": "Medium",
+    "topic": "Dynamic routing",
+    "prompt": "What information does a link-state algorithm use that differs from initial distance-vector knowledge?",
+    "options": [
+      "Complete topology and link costs",
+      "Only HTTP cookies",
+      "Only a receiver's port number",
+      "Only a shared encryption key"
+    ],
+    "correctIndex": 0,
+    "explanation": "Link-state algorithms have global topology information; distance-vector routers initially know their neighboring link costs.",
+    "source": {
+      "part": "3",
+      "page": 16
+    }
+  },
+  {
+    "id": "q045",
+    "difficulty": "Medium",
+    "topic": "Dynamic routing",
+    "prompt": "Which event can trigger a distance-vector recomputation?",
+    "options": [
+      "A local link-cost change or a neighbor's update",
+      "Only a user changing a browser theme",
+      "Only an Ethernet address being printed",
+      "Only a DNS cache hit"
+    ],
+    "correctIndex": 0,
+    "explanation": "The distributed algorithm reacts asynchronously to local changes and received distance-vector messages.",
+    "source": {
+      "part": "3",
+      "page": 29
+    }
+  },
+  {
+    "id": "q046",
+    "difficulty": "Medium",
+    "topic": "Dynamic routing",
+    "prompt": "With poisoned reverse, if Z routes to X through Y, what distance does Z advertise to Y for X?",
+    "options": [
+      "Infinity",
+      "Zero",
+      "Always one hop",
+      "The real distance minus one"
+    ],
+    "correctIndex": 0,
+    "explanation": "Z tells Y it has no usable path to X, preventing Y from choosing a route back through Z in this scenario.",
+    "source": {
+      "part": "3",
+      "page": 46
+    }
+  },
+  {
+    "id": "q047",
+    "difficulty": "Medium",
+    "topic": "Dynamic routing",
+    "prompt": "What is the largest reachable hop-count distance in the RIP model in the notes?",
+    "options": [
+      "15 hops",
+      "16 hops",
+      "32 hops",
+      "255 hops"
+    ],
+    "correctIndex": 0,
+    "explanation": "RIP supports distances up to 15 hops; 16 represents infinity or unreachable.",
+    "source": {
+      "part": "3",
+      "page": 57
+    }
+  },
+  {
+    "id": "q048",
+    "difficulty": "Medium",
+    "topic": "Dynamic routing",
+    "prompt": "What are the two hierarchy levels shown for OSPF?",
+    "options": [
+      "Local areas and the backbone",
+      "TCP and UDP",
+      "Public and private keys",
+      "HTTP headers and cookies"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hierarchical OSPF limits detailed link-state information to areas and connects them through a backbone.",
+    "source": {
+      "part": "3",
+      "page": 63
+    }
+  },
+  {
+    "id": "q049",
+    "difficulty": "Medium",
+    "topic": "Dynamic routing",
+    "prompt": "Which pairing of BGP roles is correct?",
+    "options": [
+      "eBGP: neighboring AS reachability; iBGP: propagation within an AS",
+      "eBGP: within-AS propagation only; iBGP: physical signal encoding",
+      "eBGP: DNS lookup; iBGP: ARP resolution",
+      "eBGP: TCP flow control; iBGP: UDP checksum"
+    ],
+    "correctIndex": 0,
+    "explanation": "eBGP exchanges reachability across AS boundaries; iBGP spreads that reachability internally.",
+    "source": {
+      "part": "3",
+      "page": 67
+    }
+  },
+  {
+    "id": "q050",
+    "difficulty": "Medium",
+    "topic": "Dynamic routing",
+    "prompt": "What does the BGP AS-PATH attribute list?",
+    "options": [
+      "Autonomous systems traversed by a prefix advertisement",
+      "Every TCP byte acknowledged",
+      "DNS servers queried by a browser",
+      "A sequence of encryption keys"
+    ],
+    "correctIndex": 0,
+    "explanation": "AS-PATH records the AS sequence through which a route advertisement has passed.",
+    "source": {
+      "part": "3",
+      "page": 70
+    }
+  },
+  {
+    "id": "q051",
+    "difficulty": "Medium",
+    "topic": "NAT & IPv6",
+    "prompt": "Which fields does the illustrated NAT router replace in outgoing datagrams?",
+    "options": [
+      "Source IP address and source port",
+      "Destination hostname and HTTP method",
+      "Only Ethernet preamble bits",
+      "Only TTL with a permanent value of zero"
+    ],
+    "correctIndex": 0,
+    "explanation": "The router replaces the private source IP/port pair with its public IP and a translated port.",
+    "source": {
+      "part": "4",
+      "page": 9
+    }
+  },
+  {
+    "id": "q052",
+    "difficulty": "Medium",
+    "topic": "NAT & IPv6",
+    "prompt": "Why must the illustrated NAT router remember translation pairs?",
+    "options": [
+      "To map incoming replies back to the correct internal IP and port",
+      "To guarantee that no packets can be lost",
+      "To compute every AS path",
+      "To remove the need for TCP checksums"
+    ],
+    "correctIndex": 0,
+    "explanation": "The NAT table connects each public translated endpoint with the corresponding private endpoint.",
+    "source": {
+      "part": "4",
+      "page": 9
+    }
+  },
+  {
+    "id": "q053",
+    "difficulty": "Medium",
+    "topic": "NAT & IPv6",
+    "prompt": "Which field is absent from the IPv6 base header as shown in the notes?",
+    "options": [
+      "Header checksum",
+      "Source address",
+      "Destination address",
+      "Hop limit"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IPv6 format omits the header checksum to speed router processing.",
+    "source": {
+      "part": "4",
+      "page": 14
+    }
+  },
+  {
+    "id": "q054",
+    "difficulty": "Medium",
+    "topic": "NAT & IPv6",
+    "prompt": "How does the described IPv6-over-IPv4 tunnel cross IPv4 routers?",
+    "options": [
+      "It carries the IPv6 datagram inside an IPv4 datagram",
+      "It replaces the IPv6 address with a MAC address",
+      "It sends IPv6 data only as DNS records",
+      "It deletes the IPv6 header permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tunneling treats an IPv6 datagram as the payload of an IPv4 datagram between tunnel endpoints.",
+    "source": {
+      "part": "4",
+      "page": 15
+    }
+  },
+  {
+    "id": "q055",
+    "difficulty": "Medium",
+    "topic": "Transport & TCP",
+    "prompt": "Which values identify a TCP connection for demultiplexing?",
+    "options": [
+      "Source/destination IP addresses and source/destination ports",
+      "Only the destination port",
+      "Only the source MAC address",
+      "Only the IP TTL"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCP uses a four-tuple to distinguish simultaneous connections.",
+    "source": {
+      "part": "5",
+      "page": 20
+    }
+  },
+  {
+    "id": "q056",
+    "difficulty": "Medium",
+    "topic": "Transport & TCP",
+    "prompt": "Two UDP datagrams have different source endpoints but the same destination port on the same receiving host. In the notes' model, where do they go?",
+    "options": [
+      "The same receiving UDP socket",
+      "Two TCP sockets determined by SYN flags",
+      "Always to the default gateway",
+      "They must both be discarded"
+    ],
+    "correctIndex": 0,
+    "explanation": "The connectionless demultiplexing model uses the destination port on the receiving host.",
+    "source": {
+      "part": "5",
+      "page": 18
+    }
+  },
+  {
+    "id": "q057",
+    "difficulty": "Medium",
+    "topic": "Transport & TCP",
+    "prompt": "Which order establishes the TCP connection described in the notes?",
+    "options": [
+      "SYN, SYN-ACK, ACK",
+      "ACK, FIN, ARP",
+      "FIN, SYN, DNS",
+      "SYN, FIN, FIN"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCP uses a three-way handshake to agree on a connection and initial sequence numbers.",
+    "source": {
+      "part": "5",
+      "page": 66
+    }
+  },
+  {
+    "id": "q058",
+    "difficulty": "Medium",
+    "topic": "Transport & TCP",
+    "prompt": "What triggers TCP fast retransmit?",
+    "options": [
+      "Three additional duplicate ACKs for the same data",
+      "A DNS cache expiration",
+      "Every successful HTTP request",
+      "A new subnet mask"
+    ],
+    "correctIndex": 0,
+    "explanation": "Triple duplicate ACKs indicate a likely missing segment, allowing retransmission before the timeout.",
+    "source": {
+      "part": "5",
+      "page": 57
+    }
+  },
+  {
+    "id": "q059",
+    "difficulty": "Medium",
+    "topic": "Transport & TCP",
+    "prompt": "What distinguishes flow control from congestion control?",
+    "options": [
+      "Flow control protects the receiver; congestion control responds to network overload",
+      "Both only determine MAC addresses",
+      "Flow control chooses AS paths; congestion control encrypts messages",
+      "Flow control guarantees infinite bandwidth"
+    ],
+    "correctIndex": 0,
+    "explanation": "Flow control avoids overwhelming one receiver's buffer; congestion control addresses overloaded network resources.",
+    "source": {
+      "part": "5",
+      "page": 73
+    }
+  },
+  {
+    "id": "q060",
+    "difficulty": "Medium",
+    "topic": "Transport & TCP",
+    "prompt": "In the simplified slow-start model, how does cwnd grow while below the threshold and without loss?",
+    "options": [
+      "Approximately doubles each RTT",
+      "Remains constant forever",
+      "Decreases by one MSS each RTT",
+      "Increases only once per hour"
+    ],
+    "correctIndex": 0,
+    "explanation": "Slow start begins with a small window but increases exponentially through acknowledgments.",
+    "source": {
+      "part": "5",
+      "page": 79
+    }
+  },
+  {
+    "id": "q061",
+    "difficulty": "Medium",
+    "topic": "Application protocols",
+    "prompt": "What distinguishes persistent HTTP from non-persistent HTTP?",
+    "options": [
+      "Multiple objects can share one TCP connection",
+      "Persistent HTTP cannot carry objects",
+      "Each persistent object requires a new TCP connection",
+      "Persistent HTTP removes all transport protocols"
+    ],
+    "correctIndex": 0,
+    "explanation": "Persistent HTTP reuses an open connection for multiple requests and responses.",
+    "source": {
+      "part": "6",
+      "page": 27
+    }
+  },
+  {
+    "id": "q062",
+    "difficulty": "Medium",
+    "topic": "Application protocols",
+    "prompt": "Which HTTP method requests only the headers that a GET would return?",
+    "options": [
+      "HEAD",
+      "POST",
+      "PUT",
+      "CONNECT-ARP"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes describe HEAD as requesting response headers without the object's body.",
+    "source": {
+      "part": "6",
+      "page": 34
+    }
+  },
+  {
+    "id": "q063",
+    "difficulty": "Medium",
+    "topic": "Application protocols",
+    "prompt": "A conditional GET confirms a cached object is still current. Which response avoids retransmitting its body?",
+    "options": [
+      "304 Not Modified",
+      "404 Not Found",
+      "505 HTTP Version Not Supported",
+      "301 Moved Permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "The server returns 304 with no object when the cached version is up to date.",
+    "source": {
+      "part": "6",
+      "page": 47
+    }
+  },
+  {
+    "id": "q064",
+    "difficulty": "Medium",
+    "topic": "Application protocols",
+    "prompt": "Why is FTP control described as out of band?",
+    "options": [
+      "Control and data use separate TCP connections",
+      "Control messages are sent only as light pulses",
+      "FTP never sends control commands",
+      "Control and data are always the same packet"
+    ],
+    "correctIndex": 0,
+    "explanation": "FTP maintains a separate control connection while opening data connections for transfers.",
+    "source": {
+      "part": "6",
+      "page": 56
+    }
+  },
+  {
+    "id": "q065",
+    "difficulty": "Medium",
+    "topic": "Application protocols",
+    "prompt": "Which feature makes IMAP useful when accessing mail from several devices?",
+    "options": [
+      "Server-side message management and synchronization",
+      "Deleting all server messages before reading",
+      "Replacing TCP with ARP",
+      "Assigning a new IP address for every email"
+    ],
+    "correctIndex": 0,
+    "explanation": "IMAP allows messages and folders to remain on the server and synchronizes changes across devices.",
+    "source": {
+      "part": "6",
+      "page": 76
+    }
+  },
+  {
+    "id": "q066",
+    "difficulty": "Medium",
+    "topic": "Security",
+    "prompt": "An attacker observes message contents and traffic patterns without altering communication. What type of attack is this?",
+    "options": [
+      "Passive attack",
+      "Replay attack",
+      "Message fabrication",
+      "Denial of service"
+    ],
+    "correctIndex": 0,
+    "explanation": "Passive attacks include reading content and traffic analysis without manipulating communication.",
+    "source": {
+      "part": "7",
+      "page": 10
+    }
+  },
+  {
+    "id": "q067",
+    "difficulty": "Medium",
+    "topic": "Security",
+    "prompt": "An attacker records a valid message and transmits it again later. Which attack is described?",
+    "options": [
+      "Replay",
+      "Passive traffic analysis only",
+      "Legitimate load balancing",
+      "Quantization"
+    ],
+    "correctIndex": 0,
+    "explanation": "Replay actively reuses captured communication at a later time.",
+    "source": {
+      "part": "7",
+      "page": 11
+    }
+  },
+  {
+    "id": "q068",
+    "difficulty": "Hard",
+    "topic": "Network basics",
+    "prompt": "A sends an IP datagram to remote host B through router R, with no NAT. Which combination is correct before the first hop?",
+    "options": [
+      "IP source A, IP destination B, MAC source A, MAC destination R",
+      "IP source R, IP destination B, MAC source B, MAC destination A",
+      "IP source A, IP destination R, MAC source A, MAC destination B",
+      "IP source B, IP destination A, MAC source R, MAC destination B"
+    ],
+    "correctIndex": 0,
+    "explanation": "End-to-end IP addresses identify A and B, while the first Ethernet frame identifies A and R's local interface.",
+    "source": {
+      "part": "1",
+      "page": 63
+    }
+  },
+  {
+    "id": "q069",
+    "difficulty": "Hard",
+    "topic": "Network basics",
+    "prompt": "A cached IP-to-MAC entry disappears unless refreshed. Why is this called soft state?",
+    "options": [
+      "The mapping has a lifetime and can expire",
+      "It is permanently hardcoded into every router",
+      "It is encrypted with AES by definition",
+      "It cannot ever change after boot"
+    ],
+    "correctIndex": 0,
+    "explanation": "ARP mappings are soft state: cached information times out unless maintained or refreshed.",
+    "source": {
+      "part": "1",
+      "page": 54
+    }
+  },
+  {
+    "id": "q070",
+    "difficulty": "Hard",
+    "topic": "Static routing",
+    "prompt": "Installed routes are 10.0.0.0/8 via A, 10.1.0.0/16 via B, and 10.1.2.0/24 via C. Which next hop matches 10.1.2.99?",
+    "options": [
+      "C",
+      "B",
+      "A",
+      "None because all three match"
+    ],
+    "correctIndex": 0,
+    "explanation": "All three match, but /24 is the longest matching prefix and therefore selects C.",
+    "source": {
+      "part": "2",
+      "page": 17
+    }
+  },
+  {
+    "id": "q071",
+    "difficulty": "Hard",
+    "topic": "Static routing",
+    "prompt": "Candidates for the same prefix are a connected route with AD 0, a static route with AD 1, and EIGRP with AD 90. Which source is preferred?",
+    "options": [
+      "Connected route",
+      "Static route",
+      "EIGRP route",
+      "All are equally preferred regardless of AD"
+    ],
+    "correctIndex": 0,
+    "explanation": "For the same prefix, the lowest administrative distance is preferred: 0 before 1 and 90.",
+    "source": {
+      "part": "2",
+      "page": 42
+    }
+  },
+  {
+    "id": "q072",
+    "difficulty": "Hard",
+    "topic": "Static routing",
+    "prompt": "A primary EIGRP route has AD 90. Which proposed static AD makes it float behind that route?",
+    "options": [
+      "95",
+      "1",
+      "80",
+      "90"
+    ],
+    "correctIndex": 0,
+    "explanation": "The backup static route needs AD greater than 90; 95 meets that requirement.",
+    "source": {
+      "part": "2",
+      "page": 59
+    }
+  },
+  {
+    "id": "q073",
+    "difficulty": "Hard",
+    "topic": "Static routing",
+    "prompt": "A router has 192.168.4.0/24 and a default route. Which destination uses the default route?",
+    "options": [
+      "192.168.5.10",
+      "192.168.4.1",
+      "192.168.4.100",
+      "192.168.4.200"
+    ],
+    "correctIndex": 0,
+    "explanation": "Only 192.168.5.10 fails to match the more specific 192.168.4.0/24 route.",
+    "source": {
+      "part": "2",
+      "page": 17
+    }
+  },
+  {
+    "id": "q074",
+    "difficulty": "Hard",
+    "topic": "Dynamic routing",
+    "prompt": "Dijkstra currently has D(V)=10, D(W)=4, and link cost W-V=3. What is V's estimate after relaxation through W?",
+    "options": [
+      "7",
+      "10",
+      "3",
+      "14"
+    ],
+    "correctIndex": 0,
+    "explanation": "The update is min(10, 4 + 3) = 7.",
+    "source": {
+      "part": "3",
+      "page": 19
+    }
+  },
+  {
+    "id": "q075",
+    "difficulty": "Hard",
+    "topic": "Dynamic routing",
+    "prompt": "Unsettled nodes have tentative distances B=5, C=2, and D=8. Which node does Dijkstra settle next?",
+    "options": [
+      "C",
+      "B",
+      "D",
+      "All three must be settled simultaneously"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dijkstra selects the unsettled node with the smallest tentative distance.",
+    "source": {
+      "part": "3",
+      "page": 19
+    }
+  },
+  {
+    "id": "q076",
+    "difficulty": "Hard",
+    "topic": "Dynamic routing",
+    "prompt": "U's links to V, X, W cost 2, 1, 5; their advertised costs to Z are 5, 3, 3. Which next hop and cost does Bellman-Ford select?",
+    "options": [
+      "X at cost 4",
+      "V at cost 5",
+      "W at cost 3",
+      "V at cost 7"
+    ],
+    "correctIndex": 0,
+    "explanation": "The totals are 2+5=7, 1+3=4, and 5+3=8; X gives the minimum.",
+    "source": {
+      "part": "3",
+      "page": 27
+    }
+  },
+  {
+    "id": "q077",
+    "difficulty": "Hard",
+    "topic": "Dynamic routing",
+    "prompt": "After a failed path, two distance-vector routers keep choosing each other based on stale low costs. What problem can result?",
+    "options": [
+      "Count to infinity",
+      "A guaranteed immediate shortest path",
+      "HTTP head-of-line elimination",
+      "Public-key key exchange"
+    ],
+    "correctIndex": 0,
+    "explanation": "Stale mutual next-hop choices can create loops and progressively increasing distance estimates.",
+    "source": {
+      "part": "3",
+      "page": 45
+    }
+  },
+  {
+    "id": "q078",
+    "difficulty": "Hard",
+    "topic": "Dynamic routing",
+    "prompt": "Z reaches X through Y. How does poisoned reverse specifically discourage Y from sending X-bound traffic back to Z?",
+    "options": [
+      "Z advertises infinity for X to Y",
+      "Z advertises zero for X to Y",
+      "Z disables all routes to every destination",
+      "Z changes X's address into a DNS alias"
+    ],
+    "correctIndex": 0,
+    "explanation": "The infinity advertisement tells Y that Z cannot be used as an alternate route to X while Z relies on Y.",
+    "source": {
+      "part": "3",
+      "page": 46
+    }
+  },
+  {
+    "id": "q079",
+    "difficulty": "Hard",
+    "topic": "Dynamic routing",
+    "prompt": "Two otherwise eligible exits have intra-AS costs 10 and 20. Under hot-potato routing, which exit is chosen even if its external AS path is longer?",
+    "options": [
+      "The exit with intra-AS cost 10",
+      "The exit with intra-AS cost 20",
+      "Always the one with the longer internal path",
+      "Neither because external paths must be identical"
+    ],
+    "correctIndex": 0,
+    "explanation": "Hot-potato routing chooses the closest exit by intra-domain cost rather than minimizing the remaining external cost.",
+    "source": {
+      "part": "3",
+      "page": 77
+    }
+  },
+  {
+    "id": "q080",
+    "difficulty": "Hard",
+    "topic": "Dynamic routing",
+    "prompt": "Two BGP routes have equal local preference. One has a shorter AS-PATH but a farther NEXT-HOP. In the selection order shown, which criterion is considered first?",
+    "options": [
+      "Shorter AS-PATH",
+      "Closer NEXT-HOP",
+      "Larger TCP receive window",
+      "HTTP cache freshness"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes list local preference, then shortest AS-PATH, then closest NEXT-HOP and additional criteria.",
+    "source": {
+      "part": "3",
+      "page": 80
+    }
+  },
+  {
+    "id": "q081",
+    "difficulty": "Hard",
+    "topic": "NAT & IPv6",
+    "prompt": "The NAT table maps 10.0.0.1:3345 to 138.76.29.7:5001. A reply reaches 138.76.29.7:5001. What destination does NAT restore?",
+    "options": [
+      "10.0.0.1:3345",
+      "10.0.0.1:5001",
+      "138.76.29.7:3345",
+      "128.119.40.186:80"
+    ],
+    "correctIndex": 0,
+    "explanation": "The incoming public endpoint is translated back to its stored private IP/port pair.",
+    "source": {
+      "part": "4",
+      "page": 10
+    }
+  },
+  {
+    "id": "q082",
+    "difficulty": "Hard",
+    "topic": "NAT & IPv6",
+    "prompt": "Two private hosts use the same source port to contact the same remote server through one NAT public IP. What allows their replies to be distinguished in this model?",
+    "options": [
+      "Distinct translated public ports with separate table mappings",
+      "Deleting every source port",
+      "Giving both flows the same full public endpoint",
+      "Using the IP TTL as the sole flow identifier"
+    ],
+    "correctIndex": 0,
+    "explanation": "The NAT stores private-to-public endpoint translations and assigns distinguishable public-side ports.",
+    "source": {
+      "part": "4",
+      "page": 9
+    }
+  },
+  {
+    "id": "q083",
+    "difficulty": "Hard",
+    "topic": "NAT & IPv6",
+    "prompt": "An IPv6 packet from A to F is tunneled over IPv4 from B to E. Which addresses appear in the inner and outer packets?",
+    "options": [
+      "Inner IPv6 A-to-F; outer IPv4 B-to-E",
+      "Inner IPv6 B-to-E; outer IPv4 A-to-F",
+      "Both packets use only A-to-F IPv4 addresses",
+      "Both packets use only Ethernet MAC addresses"
+    ],
+    "correctIndex": 0,
+    "explanation": "The original IPv6 endpoints remain in the encapsulated packet; the outer IPv4 header addresses the tunnel endpoints.",
+    "source": {
+      "part": "4",
+      "page": 18
+    }
+  },
+  {
+    "id": "q084",
+    "difficulty": "Hard",
+    "topic": "NAT & IPv6",
+    "prompt": "Which combination matches the IPv6 base format shown in the notes?",
+    "options": [
+      "128-bit addresses, no header checksum, and a hop-limit field",
+      "32-bit addresses, header checksum, and no hop limit",
+      "48-bit addresses, an ARP table, and TCP rwnd",
+      "128-byte addresses with a 20-byte fixed header"
+    ],
+    "correctIndex": 0,
+    "explanation": "The diagram shows 128-bit source/destination addresses, a hop limit, and omission of the IPv4-style header checksum.",
+    "source": {
+      "part": "4",
+      "page": 14
+    }
+  },
+  {
+    "id": "q085",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "B has received bytes through 126. A sends 80 bytes starting at sequence 127, then 40 bytes. What is the second segment's sequence number?",
+    "options": [
+      "207",
+      "127",
+      "206",
+      "247"
+    ],
+    "correctIndex": 0,
+    "explanation": "The first segment contains bytes 127 through 206, so the next starts at 207.",
+    "source": {
+      "part": "5-Exercises",
+      "page": 5
+    }
+  },
+  {
+    "id": "q086",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "The first in-order segment starts at 127 and carries 80 bytes. Its source port is 302 and destination port is 80. What ACK number and reply ports does B use?",
+    "options": [
+      "ACK 207; source 80; destination 302",
+      "ACK 206; source 302; destination 80",
+      "ACK 127; source 80; destination 80",
+      "ACK 80; source 207; destination 302"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCP ACKs the next expected byte (207), and the reply reverses the source and destination ports.",
+    "source": {
+      "part": "5-Exercises",
+      "page": 5
+    }
+  },
+  {
+    "id": "q087",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "B has received all bytes through 126. A's segment starting at 207 arrives before the missing segment starting at 127. Under cumulative ACKs, what number does B acknowledge?",
+    "options": [
+      "127",
+      "207",
+      "247",
+      "126"
+    ],
+    "correctIndex": 0,
+    "explanation": "B still expects byte 127, so an out-of-order later segment does not advance the cumulative acknowledgment.",
+    "source": {
+      "part": "5-Exercises",
+      "page": 5
+    }
+  },
+  {
+    "id": "q088",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "EstimatedRTT is 100 ms and the next SampleRTT is 106 ms. With alpha=0.125, what is the new estimate?",
+    "options": [
+      "100.75 ms",
+      "106 ms",
+      "103 ms",
+      "113.25 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "The EWMA is 0.875×100 + 0.125×106 = 100.75 ms, applying the Part 5 formula to Exercise 2.",
+    "source": {
+      "part": "5-Exercises",
+      "page": 6
+    }
+  },
+  {
+    "id": "q089",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "After the 106 ms sample, EstimatedRTT is 100.75 ms and old DevRTT is 5 ms. With beta=0.25, what is the new DevRTT?",
+    "options": [
+      "5.0625 ms",
+      "5.25 ms",
+      "6.3125 ms",
+      "1.3125 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "DevRTT = 0.75×5 + 0.25×abs(106-100.75) = 5.0625 ms.",
+    "source": {
+      "part": "5-Exercises",
+      "page": 6
+    }
+  },
+  {
+    "id": "q090",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "EstimatedRTT is 100.75 ms and DevRTT is 5.0625 ms. What TimeoutInterval follows the notes' formula?",
+    "options": [
+      "121 ms",
+      "105.8125 ms",
+      "100.75 ms",
+      "141.25 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "TimeoutInterval = EstimatedRTT + 4×DevRTT = 100.75 + 20.25 = 121 ms.",
+    "source": {
+      "part": "5",
+      "page": 51
+    }
+  },
+  {
+    "id": "q091",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "A receiver advertises rwnd=12,000 bytes and the sender has cwnd=8,000 bytes. What limits the send window?",
+    "options": [
+      "8,000 bytes",
+      "12,000 bytes",
+      "20,000 bytes",
+      "4,000 bytes"
+    ],
+    "correctIndex": 0,
+    "explanation": "The allowed send window is min(flow-control window, congestion window) = 8,000 bytes.",
+    "source": {
+      "part": "5",
+      "page": 77
+    }
+  },
+  {
+    "id": "q092",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "In the simplified model, cwnd starts at 1 MSS and ssthresh is 8 MSS. With no loss, what is cwnd after four completed RTT rounds?",
+    "options": [
+      "9 MSS",
+      "16 MSS",
+      "8 MSS",
+      "4 MSS"
+    ],
+    "correctIndex": 0,
+    "explanation": "The sequence is 1, 2, 4, 8, then 9: growth changes from doubling to additive at the threshold.",
+    "source": {
+      "part": "5",
+      "page": 82
+    }
+  },
+  {
+    "id": "q093",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "In the notes' simplified Reno model, cwnd is 20 MSS when triple duplicate ACKs signal loss. What window follows the reduction?",
+    "options": [
+      "10 MSS",
+      "1 MSS",
+      "20 MSS",
+      "40 MSS"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reno halves the window on triple duplicate ACKs in this model, giving 10 MSS.",
+    "source": {
+      "part": "5",
+      "page": 83
+    }
+  },
+  {
+    "id": "q094",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "Under TCP Tahoe, cwnd is 20 MSS when triple duplicate ACKs indicate loss. What does cwnd become?",
+    "options": [
+      "1 MSS",
+      "10 MSS",
+      "20 MSS",
+      "21 MSS"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes state that Tahoe sets cwnd to 1 MSS for timeout or triple duplicate ACKs.",
+    "source": {
+      "part": "5",
+      "page": 83
+    }
+  },
+  {
+    "id": "q095",
+    "difficulty": "Hard",
+    "topic": "Transport & TCP",
+    "prompt": "Ignoring slow start and losses, cwnd increases by 1 MSS per RTT. How long does it take to grow from 6 MSS to 12 MSS?",
+    "options": [
+      "6 RTTs",
+      "1 RTT",
+      "3 RTTs",
+      "12 RTTs"
+    ],
+    "correctIndex": 0,
+    "explanation": "Six increments of one MSS are needed; at one increment per RTT the elapsed time is 6 RTTs.",
+    "source": {
+      "part": "5-Exercises",
+      "page": 16
+    }
+  },
+  {
+    "id": "q096",
+    "difficulty": "Hard",
+    "topic": "Application protocols",
+    "prompt": "For one non-persistent HTTP object, RTT is 40 ms and transmission takes 10 ms. Ignoring DNS and other delays, what is response time?",
+    "options": [
+      "90 ms",
+      "50 ms",
+      "80 ms",
+      "130 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes use 2×RTT + transmission time = 80 + 10 = 90 ms.",
+    "source": {
+      "part": "6",
+      "page": 30
+    }
+  },
+  {
+    "id": "q097",
+    "difficulty": "Hard",
+    "topic": "Application protocols",
+    "prompt": "An HTML page references 10 JPEG objects. Under the notes' non-persistent model, how many TCP connections fetch the HTML and all images?",
+    "options": [
+      "11",
+      "10",
+      "1",
+      "20"
+    ],
+    "correctIndex": 0,
+    "explanation": "Non-persistent HTTP transfers at most one object per connection: one HTML object plus ten images needs eleven connections.",
+    "source": {
+      "part": "6",
+      "page": 29
+    }
+  },
+  {
+    "id": "q098",
+    "difficulty": "Hard",
+    "topic": "Application protocols",
+    "prompt": "A server distributes a 100-Mbit file to 10 clients, uploads at 20 Mbps, and each client downloads at least 10 Mbps. What client-server lower-bound term dominates?",
+    "options": [
+      "NF/us = 50 seconds",
+      "F/dmin = 10 seconds",
+      "F/us = 5 seconds",
+      "NF/dmin = 100 seconds"
+    ],
+    "correctIndex": 0,
+    "explanation": "The bound is max(NF/us, F/dmin) = max(50,10), so server upload capacity dominates.",
+    "source": {
+      "part": "6",
+      "page": 100
+    }
+  },
+  {
+    "id": "q099",
+    "difficulty": "Hard",
+    "topic": "Security",
+    "prompt": "Bob signs a digest with his private key. Which key does Alice use to verify that signature in the notes' model?",
+    "options": [
+      "Bob's public key",
+      "Alice's private key",
+      "A NAT public port",
+      "The DNS server's subnet mask"
+    ],
+    "correctIndex": 0,
+    "explanation": "The signature is made using Bob's private key and checked using Bob's public key, then compared with the digest of the received message.",
+    "source": {
+      "part": "7",
+      "page": 33
+    }
+  },
+  {
+    "id": "q100",
+    "difficulty": "Hard",
+    "topic": "Security",
+    "prompt": "Why is the Internet checksum unsuitable as a cryptographic integrity hash in the example?",
+    "options": [
+      "Different messages with the same checksum can be constructed easily",
+      "It cannot produce a fixed-length output",
+      "It is always secret-key encryption",
+      "It changes routing metrics automatically"
+    ],
+    "correctIndex": 0,
+    "explanation": "The notes demonstrate different messages with identical checksums; a security hash needs stronger resistance to such constructions.",
+    "source": {
+      "part": "7",
+      "page": 32
+    }
+  }
+]
