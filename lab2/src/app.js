@@ -5,7 +5,7 @@ const levelCopy = ['Build your foundations', 'Connect the concepts', 'Work throu
 let questions = [], topics = [];
 let theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 try { theme = localStorage.getItem('network2-lab-theme') || theme; } catch {}
-const state = { screen: 'home', level: 'Normal', topic: 'All topics', length: '10', mode: 'practice', sessionMode: 'practice', session: [], answers: {}, index: 0, locked: false, missedOnly: false };
+const state = { screen: 'home', level: 'Normal', topic: 'All topics', length: '10', mode: 'practice', sessionMode: 'practice', session: [], answers: {}, index: 0, locked: false, missedOnly: false, runPool: [], completedIds: new Set(), batchSize: 10 };
 const esc = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const btn = (action, text, cls = 'primary', attrs = '') => `<button type="button" class="${cls}" data-action="${action}" ${attrs}>${text}</button>`;
 const source = q => `<span class="source">Source: ${q.source.part === "5-Exercises" ? "Part 5 Exercises" : `Part ${q.source.part}`} · PDF page ${q.source.page}</span>`;
@@ -23,6 +23,15 @@ function start(selected = pool(), count = sessionCount()) {
   state.session = shuffle(selected).slice(0, count).map(q => ({ ...q, order: shuffle([0, 1, 2, 3]) }));
   state.sessionMode = state.mode; state.answers = {}; state.index = 0; state.locked = false; state.missedOnly = false; state.screen = 'quiz';
   render(true);
+}
+function remaining() { return state.runPool.filter(q => !state.completedIds.has(q.id)); }
+function startRun() {
+  state.runPool = pool(); state.completedIds = new Set();
+  state.batchSize = sessionCount(); start(state.runPool, state.batchSize);
+}
+function continueRun(all = false) {
+  const available = remaining();
+  if (available.length) start(available, all ? available.length : Math.min(state.batchSize, available.length));
 }
 function art() { return `<div class="network-art" aria-hidden="true"><div class="art-top"><span>THE LEARNING NETWORK</span><span class="live-dot">CONNECTED</span></div><svg viewBox="0 0 420 260"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#7d9386" opacity=".25"/></pattern></defs><rect width="420" height="260" fill="url(#dots)"/><g stroke="#8ea787" stroke-width="1.3" fill="none"><path d="M70 70 200 130 335 65M70 200 200 130 340 200M70 70 70 200M335 65 340 200M200 130 205 30M200 130 205 235"/><path d="M70 70 335 65M70 200 340 200" stroke-dasharray="4 6" opacity=".5"/></g><g fill="#263d32" stroke="#94b478"><circle cx="70" cy="70" r="23"/><circle cx="335" cy="65" r="23"/><circle cx="70" cy="200" r="23"/><circle cx="340" cy="200" r="23"/><circle cx="205" cy="30" r="8"/><circle cx="205" cy="235" r="8"/></g><circle cx="200" cy="130" r="40" fill="#c6ed86"/><circle cx="200" cy="130" r="49" fill="none" stroke="#c6ed86" opacity=".35"/><g font-family="monospace" font-size="12" fill="#c6ed86" text-anchor="middle"><text x="70" y="74">01</text><text x="335" y="69">02</text><text x="70" y="204">03</text><text x="340" y="204">04</text><text x="200" y="134" fill="#152925" font-weight="bold">YOU</text></g></svg><div class="art-bottom"><span>CONCEPT → PRACTICE → CONFIDENCE</span><span>↗</span></div></div>`; }
 function homeView() {
@@ -45,8 +54,9 @@ function quizView() {
   <div class="question-footer"><span>${state.sessionMode === 'exam' ? 'Answers revealed at the end' : state.locked ? 'Take a moment to understand why.' : 'No timer. Take your time.'}</span>${state.locked ? btn('next', `${state.index + 1 === state.session.length ? 'See results' : 'Next question'} →`) : btn('check', `${state.sessionMode === 'practice' ? 'Check answer' : state.index + 1 === state.session.length ? 'Finish session' : 'Save &amp; continue'} →`, 'primary', answer === undefined ? 'disabled' : '')}</div></article></section>`;
 }
 function resultsView() {
+  const available = remaining(), nextCount = Math.min(state.batchSize, available.length);
   const wrong = missed(), correct = state.session.length - wrong.length, percent = Math.round(correct / state.session.length * 100);
-  return `<section class="results"><p class="eyebrow">SESSION COMPLETE / KEEP CONNECTING</p><div class="result-hero"><div><h1 tabindex="-1">${percent >= 80 ? 'Great connections.' : percent >= 50 ? 'You’re getting there.' : 'A starting point to grow.'}</h1><p>${correct} correct out of ${state.session.length}. ${wrong.length ? 'Review the explanations below and give the tricky ones another try.' : 'You answered every question correctly. Try another level or topic next.'}</p><div class="result-actions">${btn('home', 'New session ↗')}${wrong.length ? btn('retry', `Retry ${wrong.length} missed`, 'secondary') : ''}${btn('restart', 'Restart this set ↻', 'text-button')}</div></div><div class="score-circle" style="--score:${percent}%"><div><strong>${percent}<small>%</small></strong><span>YOUR SCORE</span></div></div></div>
+  return `<section class="results"><p class="eyebrow">SESSION COMPLETE / KEEP CONNECTING</p><div class="result-hero"><div><h1 tabindex="-1">${percent >= 80 ? 'Great connections.' : percent >= 50 ? 'You’re getting there.' : 'A starting point to grow.'}</h1><p>${correct} correct out of ${state.session.length}. ${wrong.length ? 'Review the explanations below and give the tricky ones another try.' : 'You answered every question correctly. Try another level or topic next.'}</p><p class="run-progress">${state.completedIds.size} of ${state.runPool.length} questions completed in this selection. ${available.length ? `${available.length} remaining.` : 'You have completed this selection.'}</p><div class="result-actions">${available.length ? btn('continue', `Next ${nextCount} questions →`) : ''}${available.length > nextCount ? btn('continue-all', `Do all ${available.length} remaining`, 'secondary') : ''}${btn('home', 'New session ↗')}${wrong.length ? btn('retry', `Retry ${wrong.length} missed`, 'secondary') : ''}${btn('restart', 'Restart this set ↻', 'text-button')}</div></div><div class="score-circle" style="--score:${percent}%"><div><strong>${percent}<small>%</small></strong><span>YOUR SCORE</span></div></div></div>
   <div class="topic-results"><h2>By topic</h2>${topics.filter(t => state.session.some(q => q.topic === t)).map(t => { const subset = state.session.filter(q => q.topic === t), n = subset.filter(q => state.answers[q.id] === q.correctIndex).length; return `<div class="topic-row"><span>${esc(t)}</span><div class="mini-progress"><div style="width:${n / subset.length * 100}%"></div></div><strong>${n} / ${subset.length}</strong></div>`; }).join('')}</div>
   <div class="review-heading"><div><p class="eyebrow">02 / UNDERSTAND THE WHY</p><h2>Review your answers</h2></div>${btn('review', state.missedOnly ? 'Show all answers' : 'Show missed only', 'secondary', `aria-pressed="${state.missedOnly}"`)}</div>
   ${state.missedOnly && !wrong.length ? '<p class="empty-state">Nothing to revisit — all answers are correct.</p>' : ''}
@@ -58,7 +68,7 @@ function render(move = false, focusKey = '') {
   if (move) { window.scrollTo({ top: 0 }); root.querySelector('h1')?.focus({ preventScroll: true }); }
   else if (focusKey) root.querySelector(focusKey)?.focus({ preventScroll: true });
 }
-function next() { if (state.index + 1 === state.session.length) state.screen = 'results'; else { state.index++; state.locked = false; } render(true); }
+function next() { if (state.index + 1 === state.session.length) { state.session.forEach(q => state.completedIds.add(q.id)); state.screen = 'results'; } else { state.index++; state.locked = false; } render(true); }
 function showExit() {
   const dialog = root.querySelector('dialog');
   dialog.addEventListener('close', () => root.querySelector('[data-action="exit"]')?.focus(), { once: true });
@@ -73,7 +83,9 @@ root.addEventListener('click', event => {
     case 'level': state.level = value; render(false, `[data-action="level"][data-value="${value}"]`); break;
     case 'mix': state.level = state.level === 'All' ? 'Normal' : 'All'; render(false, '[data-action="mix"]'); break;
     case 'mode': state.mode = value; render(false, `[data-action="mode"][data-value="${value}"]`); break;
-    case 'start': start(); break;
+    case 'start': startRun(); break;
+    case 'continue': continueRun(); break;
+    case 'continue-all': continueRun(true); break;
     case 'answer': if (!state.locked) { state.answers[state.session[state.index].id] = Number(value); render(false, `[data-action="answer"][data-value="${value}"]`); } break;
     case 'check': if (state.answers[state.session[state.index].id] === undefined) return; if (state.sessionMode === 'practice') { state.locked = true; render(false, '[data-action="next"]'); } else next(); break;
     case 'next': next(); break;
