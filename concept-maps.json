@@ -1,0 +1,286 @@
+[
+  {
+    "title": "OSI & TCP/IP",
+    "subtitle": "Follow the jobs that turn application data into signals.",
+    "nodes": [
+      {
+        "title": "1 · Physical",
+        "definition": "The physical layer provides movement of individual bits from one hop to the next.",
+        "example": "A cable carries bits as signals.",
+        "compare": "",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 3
+      },
+      {
+        "title": "2 · Data Link",
+        "definition": "Data Link provides hop-to-hop frame delivery.",
+        "example": "An Ethernet frame crosses one local link.",
+        "compare": "",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 4
+      },
+      {
+        "title": "3 · Network",
+        "definition": "The network layer handles logical addresses and source-to-destination packet delivery.",
+        "example": "A router sends an IP packet toward another network.",
+        "compare": "",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 4
+      },
+      {
+        "title": "4 · Transport",
+        "definition": "Transport provides process-to-process delivery, using port addresses.",
+        "example": "Port numbers distinguish the applications communicating.",
+        "compare": "",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 5
+      },
+      {
+        "title": "5 · Session",
+        "definition": "Synchronization with checkpoints is a session-layer function.",
+        "example": "A checkpoint helps a transfer resume.",
+        "compare": "",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 6
+      },
+      {
+        "title": "6 · Presentation",
+        "definition": "These are the functions listed for the presentation layer.",
+        "example": "Text can be translated into another representation.",
+        "compare": "",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 6
+      },
+      {
+        "title": "7 · Application",
+        "definition": "Provides network services for applications, such as web access and mail.",
+        "example": "HTTP exchanges web requests and responses.",
+        "compare": "It provides networking services; it is not the entire browser program.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 6
+      },
+      {
+        "title": "TCP/IP model",
+        "definition": "The original TCP/IP suite has four layers; the notes also show a five-layer comparison with OSI.",
+        "example": "Group the OSI upper layers into the TCP/IP application layer.",
+        "compare": "The notes describe both the original four-layer model and the five-layer teaching comparison.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 7
+      },
+      {
+        "title": "Encapsulation",
+        "definition": "Encapsulation adds each layer's information before passing data to the next lower layer.",
+        "example": "Application data → segment → packet → frame → bits.",
+        "compare": "Decapsulation removes the added information at the receiving side.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 3
+      }
+    ]
+  },
+  {
+    "title": "Network devices",
+    "subtitle": "Compare what each device sees and forwards.",
+    "nodes": [
+      {
+        "title": "Repeater · Layer 1",
+        "definition": "Regenerates incoming signals to extend a link.",
+        "example": "Extend the reach of a LAN signal.",
+        "compare": "It does not choose a route or read MAC addresses.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 9
+      },
+      {
+        "title": "Hub · Layer 1",
+        "definition": "Repeats an incoming signal to its other interfaces.",
+        "example": "Traffic entering one port is repeated to the other ports.",
+        "compare": "A hub does not learn MAC addresses or filter frames.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 10
+      },
+      {
+        "title": "Switch · Layer 2",
+        "definition": "A hub repeats signals, while a switch can forward frames selectively using MAC addresses.",
+        "example": "A learned destination MAC address tells the switch which port to use.",
+        "compare": "Hub: repeats signals. Basic Ethernet switch: forwards frames using MAC addresses.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 10
+      },
+      {
+        "title": "Router · Layer 3",
+        "definition": "Forwards IP packets between networks using destination IP addresses and routing information.",
+        "example": "Connect an office LAN to another IP network.",
+        "compare": "Switch: delivery inside a LAN. Router: delivery between IP networks.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 10
+      },
+      {
+        "title": "How a switch learns",
+        "definition": "An Ethernet switch is a Layer 2 device that uses a MAC address table.",
+        "example": "The switch records the source MAC address and incoming port.",
+        "compare": "An unknown destination is flooded within the same broadcast domain; known unicast can use a specific port.",
+        "lab": "lab1",
+        "topic": "Link layer & access",
+        "part": 6,
+        "page": 14
+      }
+    ]
+  },
+  {
+    "title": "Addresses & delivery",
+    "subtitle": "Separate the host address, local delivery address and route.",
+    "nodes": [
+      {
+        "title": "MAC address",
+        "definition": "An Ethernet physical address contains 6 bytes, or 48 bits.",
+        "example": "00:1B:21:2E:4F:6A is an Ethernet MAC address.",
+        "compare": "MAC is used for local frame delivery; IP is used for routed packet delivery.",
+        "lab": "lab1",
+        "topic": "Models & addressing",
+        "part": 2,
+        "page": 9
+      },
+      {
+        "title": "IP address",
+        "definition": "A logical address used for host-to-host packet delivery across networks.",
+        "example": "A packet keeps the remote host as its destination IP when crossing a router without NAT.",
+        "compare": "The next-hop MAC address and final destination IP have different jobs.",
+        "lab": "lab2",
+        "topic": "Network basics",
+        "part": 1,
+        "page": 63
+      },
+      {
+        "title": "Subnet mask",
+        "definition": "The subnet mask identifies which address bits belong to the network and which to the host.",
+        "example": "192.168.1.10/24 has network prefix 192.168.1.0/24.",
+        "compare": "The prefix identifies the network part, not the application.",
+        "lab": "lab1",
+        "topic": "IP & subnetting",
+        "part": 7,
+        "page": 10
+      },
+      {
+        "title": "Default route",
+        "definition": "The default route represents destinations without another more specific route match.",
+        "example": "Use a default route when no more specific route matches.",
+        "compare": "",
+        "lab": "lab2",
+        "topic": "Static routing",
+        "part": "2",
+        "page": 53
+      },
+      {
+        "title": "ARP",
+        "definition": "An ARP table stores IP/MAC address mappings for LAN nodes, with a lifetime.",
+        "example": "Find the MAC address of the next-hop IPv4 device on the local LAN.",
+        "compare": "For a remote destination, resolve the gateway’s MAC address, not the remote host’s.",
+        "lab": "lab2",
+        "topic": "Network basics",
+        "part": "1",
+        "page": 53
+      },
+      {
+        "title": "NAT",
+        "definition": "The router replaces the private source IP/port pair with its public IP and a translated port.",
+        "example": "Several private hosts can share a public address using port translation.",
+        "compare": "Translation changes addresses or ports; it is different from deciding a route.",
+        "lab": "lab2",
+        "topic": "NAT & IPv6",
+        "part": "4",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "title": "TCP, UDP & services",
+    "subtitle": "Connect transport behavior to the services applications use.",
+    "nodes": [
+      {
+        "title": "TCP",
+        "definition": "Provides reliable, ordered delivery of a byte stream, using acknowledgments and retransmissions.",
+        "example": "A sender retransmits data that was not acknowledged.",
+        "compare": "Reliability and ordering are provided by TCP; UDP does not provide them by itself.",
+        "lab": "lab2",
+        "topic": "Transport & TCP",
+        "part": 5,
+        "page": 66
+      },
+      {
+        "title": "TCP handshake",
+        "definition": "TCP uses a three-way handshake to agree on a connection and initial sequence numbers.",
+        "example": "SYN → SYN-ACK → ACK before normal data exchange.",
+        "compare": "",
+        "lab": "lab2",
+        "topic": "Transport & TCP",
+        "part": "5",
+        "page": 66
+      },
+      {
+        "title": "UDP",
+        "definition": "UDP handles segments independently and performs no connection establishment.",
+        "example": "An application can send a datagram without a TCP-style connection setup.",
+        "compare": "The application must handle any reliability it needs.",
+        "lab": "lab2",
+        "topic": "Transport & TCP",
+        "part": "5",
+        "page": 24
+      },
+      {
+        "title": "Ports & connections",
+        "definition": "TCP uses a four-tuple to distinguish simultaneous connections.",
+        "example": "Two connections to the same server can have different source ports.",
+        "compare": "IP identifies a host interface; a port helps identify an application endpoint.",
+        "lab": "lab2",
+        "topic": "Transport & TCP",
+        "part": "5",
+        "page": 20
+      },
+      {
+        "title": "DNS",
+        "definition": "DNS is a distributed application-layer service for name/address translation.",
+        "example": "Resolve a website name to an IP address.",
+        "compare": "DNS resolves names; DHCP supplies network configuration.",
+        "lab": "lab2",
+        "topic": "Application protocols",
+        "part": "6",
+        "page": 81
+      },
+      {
+        "title": "DHCP",
+        "definition": "Automatically supplies IPv4 network settings, including an address, mask and gateway.",
+        "example": "Discover → Offer → Request → Acknowledge (DORA).",
+        "compare": "DHCP configures the client; DNS helps it find addresses for names.",
+        "lab": "lab1",
+        "topic": "IP & subnetting",
+        "part": 7,
+        "page": 63
+      }
+    ]
+  }
+]

@@ -64,7 +64,7 @@ function resultsView() {
 }
 function render(move = false, focusKey = '') {
   document.documentElement.dataset.theme = theme;
-  root.innerHTML = `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner">${btn('brand', `${mark}<span>network<span class="brand-light">lab</span></span>`, 'brand', 'aria-label="Network Lab home"')}<div class="header-right"><span class="course-pill">I3304 · 2023–2024</span>${btn('theme', `${theme === 'dark' ? '☀' : '☾'}<span>${theme === 'dark' ? 'Light' : 'Dark'}</span>`, 'theme-toggle', `aria-label="Switch to ${theme === 'dark' ? 'light' : 'dark'} theme"`)}</div></div></header><main id="main" class="container">${state.screen === 'home' ? homeView() : state.screen === 'quiz' ? quizView() : resultsView()}</main><footer class="site-footer"><span>networklab <span>·</span> Made for learning together. · © MOUTASEM-AWAD</span><span>I3304 Network Administration &amp; Security · 8 PDFs</span></footer><dialog><h2>Leave this session?</h2><p>Your current answers will be cleared when you start a new session.</p><div class="dialog-actions">${btn('cancel-exit', 'Keep practicing', 'secondary', 'autofocus')}${btn('confirm-exit', 'Leave session')}</div></dialog>`;
+  root.innerHTML = `<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner">${btn('brand', `${mark}<span>network<span class="brand-light">lab</span></span>`, 'brand', 'aria-label="Network Lab home"')}<div class="header-right"><span class="course-pill">I3304 · 2023–2024</span>${btn('theme', `${theme === 'dark' ? '☀' : '☾'}<span>${theme === 'dark' ? 'Light' : 'Dark'}</span>`, 'theme-toggle', `aria-label="Switch to ${theme === 'dark' ? 'light' : 'dark'} theme"`)}</div></div></header><main id="main" class="container">${state.screen === 'home' ? homeView() : state.screen === 'quiz' ? quizView() : resultsView()}</main><footer class="site-footer"><a href="../concept-maps.html">Explore concept maps ↗</a><span>networklab <span>·</span> Made for learning together. · © MOUTASEM-AWAD</span><span>I3304 Network Administration &amp; Security · 8 PDFs</span></footer><dialog><h2>Leave this session?</h2><p>Your current answers will be cleared when you start a new session.</p><div class="dialog-actions">${btn('cancel-exit', 'Keep practicing', 'secondary', 'autofocus')}${btn('confirm-exit', 'Leave session')}</div></dialog>`;
   if (move) { window.scrollTo({ top: 0 }); root.querySelector('h1')?.focus({ preventScroll: true }); }
   else if (focusKey) root.querySelector(focusKey)?.focus({ preventScroll: true });
 }
@@ -106,7 +106,11 @@ window.addEventListener('beforeunload', event => { if (state.screen === 'quiz') 
 try {
   const response = await fetch(new URL('./questions.json', import.meta.url));
   if (!response.ok) throw new Error('Question bank could not be loaded');
-  questions = await response.json(); topics = [...new Set(questions.map(q => q.topic))]; render();
+  questions = await response.json(); topics = [...new Set(questions.map(q => q.topic))];
+  const requested = new URLSearchParams(location.search);
+  if (topics.includes(requested.get('topic'))) state.topic = requested.get('topic');
+  if (levels.includes(requested.get('level')) || requested.get('level') === 'All') state.level = requested.get('level');
+  render();
 } catch {
   root.innerHTML = '<main class="container" style="padding-block:60px"><h1>Let’s reconnect.</h1><p style="margin-top:20px">The question bank could not be loaded. Refresh the page, or run this project using the local server described in the README.</p></main>';
 }
