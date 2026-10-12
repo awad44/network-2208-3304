@@ -1,0 +1,542 @@
+[
+  {
+    "id": "q001",
+    "difficulty": "Normal",
+    "topic": "TCP fundamentals",
+    "prompt": "Which service does TCP provide to applications?",
+    "options": [
+      "A reliable, ordered byte stream",
+      "Independent unreliable datagrams",
+      "Preserved application message boundaries",
+      "Multicast delivery to every host"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCP delivers an ordered byte stream; applications define their own message boundaries.",
+    "source": {
+      "lecture": 1,
+      "page": 9
+    }
+  },
+  {
+    "id": "q002",
+    "difficulty": "Normal",
+    "topic": "TCP fundamentals",
+    "prompt": "What does a TCP acknowledgment number identify?",
+    "options": [
+      "The next byte expected",
+      "The number of packets received",
+      "The sender's port",
+      "The last byte sent"
+    ],
+    "correctIndex": 0,
+    "explanation": "ACK numbers are cumulative and identify the next expected byte.",
+    "source": {
+      "lecture": 1,
+      "page": 11
+    }
+  },
+  {
+    "id": "q003",
+    "difficulty": "Normal",
+    "topic": "Connection management",
+    "prompt": "Which order establishes a TCP connection?",
+    "options": [
+      "SYN, SYN-ACK, ACK",
+      "ACK, FIN, SYN",
+      "SYN, RST, FIN",
+      "FIN, ACK, RST"
+    ],
+    "correctIndex": 0,
+    "explanation": "The three-way handshake exchanges initial sequence numbers and confirms both sides received them.",
+    "source": {
+      "lecture": 1,
+      "page": 15
+    }
+  },
+  {
+    "id": "q004",
+    "difficulty": "Normal",
+    "topic": "Flow control",
+    "prompt": "What does the receive window rwnd protect?",
+    "options": [
+      "The receiver's buffer",
+      "Router queues only",
+      "DNS caches",
+      "The sender's routing table"
+    ],
+    "correctIndex": 0,
+    "explanation": "Flow control prevents a fast sender from overrunning a receiver's available buffer space.",
+    "source": {
+      "lecture": 1,
+      "page": 23
+    }
+  },
+  {
+    "id": "q005",
+    "difficulty": "Normal",
+    "topic": "TCP options",
+    "prompt": "What is the purpose of TCP Window Scale?",
+    "options": [
+      "Allow windows larger than the unscaled 16-bit limit",
+      "Encrypt TCP payloads",
+      "Remove the handshake",
+      "Replace all ACKs with UDP"
+    ],
+    "correctIndex": 0,
+    "explanation": "Window Scale multiplies the window field by a negotiated power of two.",
+    "source": {
+      "lecture": 1,
+      "page": 12
+    }
+  },
+  {
+    "id": "q006",
+    "difficulty": "Normal",
+    "topic": "Flow control",
+    "prompt": "Which mechanism prevents a lost window update from causing deadlock?",
+    "options": [
+      "Persist timer and zero-window probes",
+      "Immediate connection reset",
+      "Permanent silence by both hosts",
+      "Disabling sequence numbers"
+    ],
+    "correctIndex": 0,
+    "explanation": "Probes make the receiver report its current window even if an earlier update was lost.",
+    "source": {
+      "lecture": 1,
+      "page": 28
+    }
+  },
+  {
+    "id": "q007",
+    "difficulty": "Normal",
+    "topic": "Congestion control",
+    "prompt": "Which variable is the sender's congestion window?",
+    "options": [
+      "cwnd",
+      "rwnd",
+      "MSS",
+      "TSval"
+    ],
+    "correctIndex": 0,
+    "explanation": "cwnd is maintained by the sender and limits unacknowledged data according to network conditions.",
+    "source": {
+      "lecture": 2,
+      "page": 7
+    }
+  },
+  {
+    "id": "q008",
+    "difficulty": "Normal",
+    "topic": "Congestion control",
+    "prompt": "In the lecture's ideal slow-start model, how does cwnd grow?",
+    "options": [
+      "Approximately doubles each RTT",
+      "Adds one byte each minute",
+      "Halves every ACK",
+      "Stays fixed until teardown"
+    ],
+    "correctIndex": 0,
+    "explanation": "With an ACK for each segment, slow start adds one MSS per ACK and approximately doubles each RTT.",
+    "source": {
+      "lecture": 2,
+      "page": 10
+    }
+  },
+  {
+    "id": "q009",
+    "difficulty": "Normal",
+    "topic": "Loss recovery",
+    "prompt": "What normally triggers classic TCP fast retransmit?",
+    "options": [
+      "Three duplicate ACKs",
+      "One FIN",
+      "A zero receive window",
+      "One DNS reply"
+    ],
+    "correctIndex": 0,
+    "explanation": "Three duplicate ACKs indicate a likely missing segment and trigger retransmission before RTO.",
+    "source": {
+      "lecture": 2,
+      "page": 17
+    }
+  },
+  {
+    "id": "q010",
+    "difficulty": "Normal",
+    "topic": "Loss recovery",
+    "prompt": "Why does Karn's algorithm avoid RTT samples from retransmitted segments?",
+    "options": [
+      "The ACK may refer to the original or retransmission",
+      "Retransmitted segments have no sequence numbers",
+      "RTT is always zero after loss",
+      "TCP cannot acknowledge retransmissions"
+    ],
+    "correctIndex": 0,
+    "explanation": "The transmission being acknowledged is ambiguous, so its measured RTT could corrupt the estimator.",
+    "source": {
+      "lecture": 2,
+      "page": 15
+    }
+  },
+  {
+    "id": "q011",
+    "difficulty": "Medium",
+    "topic": "TCP fundamentals",
+    "prompt": "A segment starts at sequence 5001 and carries 1000 bytes. With no earlier gaps, what ACK follows?",
+    "options": [
+      "6001",
+      "6000",
+      "5002",
+      "1000"
+    ],
+    "correctIndex": 0,
+    "explanation": "The segment contains bytes 5001 through 6000, so the next expected byte is 6001.",
+    "source": {
+      "lecture": 1,
+      "page": 11
+    }
+  },
+  {
+    "id": "q012",
+    "difficulty": "Medium",
+    "topic": "Connection management",
+    "prompt": "Why does the active closer enter TIME_WAIT?",
+    "options": [
+      "To handle a repeated FIN and let old duplicates expire",
+      "To negotiate MSS again",
+      "To restart slow start automatically",
+      "To wait for a DNS record"
+    ],
+    "correctIndex": 0,
+    "explanation": "TIME_WAIT allows retransmission of the final ACK and prevents old segments from contaminating a reused connection.",
+    "source": {
+      "lecture": 1,
+      "page": 18
+    }
+  },
+  {
+    "id": "q013",
+    "difficulty": "Medium",
+    "topic": "Connection management",
+    "prompt": "Many sockets stuck in CLOSE_WAIT most directly suggest what?",
+    "options": [
+      "The application has not closed connections after the peer closed",
+      "The network has no routers",
+      "Every ACK has been lost",
+      "Window scaling must be disabled"
+    ],
+    "correctIndex": 0,
+    "explanation": "The lecture identifies excessive CLOSE_WAIT as an application failing to call close after the remote close.",
+    "source": {
+      "lecture": 1,
+      "page": 20
+    }
+  },
+  {
+    "id": "q014",
+    "difficulty": "Medium",
+    "topic": "Flow control",
+    "prompt": "A 10000-byte window has 6000 bytes in flight. How much is usable now?",
+    "options": [
+      "4000 bytes",
+      "10000 bytes",
+      "16000 bytes",
+      "6000 bytes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Usable window equals total window minus outstanding bytes: 10000 - 6000 = 4000.",
+    "source": {
+      "lecture": 1,
+      "page": 25
+    }
+  },
+  {
+    "id": "q015",
+    "difficulty": "Medium",
+    "topic": "Flow control",
+    "prompt": "Which option disables Nagle for a latency-sensitive application?",
+    "options": [
+      "TCP_NODELAY",
+      "SACK_PERMITTED",
+      "TCP_WINDOW_SCALE",
+      "IP_TTL"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCP_NODELAY disables Nagle and can avoid stalls caused by its interaction with delayed ACKs.",
+    "source": {
+      "lecture": 1,
+      "page": 31
+    }
+  },
+  {
+    "id": "q016",
+    "difficulty": "Medium",
+    "topic": "Congestion control",
+    "prompt": "cwnd is 20000 bytes, rwnd is 12000 bytes and 7000 bytes are in flight. How many new bytes can be sent?",
+    "options": [
+      "5000",
+      "13000",
+      "12000",
+      "20000"
+    ],
+    "correctIndex": 0,
+    "explanation": "Effective usable window is min(20000,12000) - 7000 = 5000 bytes.",
+    "source": {
+      "lecture": 2,
+      "page": 7
+    }
+  },
+  {
+    "id": "q017",
+    "difficulty": "Medium",
+    "topic": "Congestion control",
+    "prompt": "After reaching ssthresh, the lecture's congestion-avoidance model grows cwnd by approximately what?",
+    "options": [
+      "One MSS per RTT",
+      "A factor of two per ACK",
+      "Ten MSS per ACK",
+      "No amount until the connection closes"
+    ],
+    "correctIndex": 0,
+    "explanation": "Congestion avoidance uses additive growth of about one MSS each RTT.",
+    "source": {
+      "lecture": 2,
+      "page": 10
+    }
+  },
+  {
+    "id": "q018",
+    "difficulty": "Medium",
+    "topic": "Loss recovery",
+    "prompt": "After three duplicate ACKs, which distinction between Tahoe and Reno is correct?",
+    "options": [
+      "Tahoe returns to cwnd 1; Reno enters fast recovery",
+      "Both disable retransmission",
+      "Tahoe doubles cwnd; Reno aborts the connection",
+      "Reno always returns to cwnd 1 while Tahoe preserves it"
+    ],
+    "correctIndex": 0,
+    "explanation": "Tahoe restarts slow start; Reno uses fast recovery after triple duplicate ACKs.",
+    "source": {
+      "lecture": 2,
+      "page": 20
+    }
+  },
+  {
+    "id": "q019",
+    "difficulty": "Medium",
+    "topic": "Loss recovery",
+    "prompt": "What does NewReno do when a partial ACK indicates another hole during recovery?",
+    "options": [
+      "Stays in recovery and retransmits the next missing segment",
+      "Immediately closes the connection",
+      "Treats all outstanding bytes as received",
+      "Disables the receive window"
+    ],
+    "correctIndex": 0,
+    "explanation": "NewReno uses partial ACKs to repair further losses without prematurely leaving recovery.",
+    "source": {
+      "lecture": 2,
+      "page": 21
+    }
+  },
+  {
+    "id": "q020",
+    "difficulty": "Medium",
+    "topic": "Loss recovery",
+    "prompt": "What extra information do SACK blocks give the sender?",
+    "options": [
+      "Received byte ranges beyond the cumulative ACK",
+      "The receiver's encryption key",
+      "A new IP route",
+      "The application's message boundaries"
+    ],
+    "correctIndex": 0,
+    "explanation": "SACK describes non-contiguous received blocks, helping the sender target missing ranges.",
+    "source": {
+      "lecture": 2,
+      "page": 24
+    }
+  },
+  {
+    "id": "q021",
+    "difficulty": "Hard",
+    "topic": "Flow control",
+    "prompt": "A 500 Mb/s path has 40 ms RTT. What is its BDP in decimal bytes?",
+    "options": [
+      "2500000 bytes",
+      "250000 bytes",
+      "20000000 bytes",
+      "62500 bytes"
+    ],
+    "correctIndex": 0,
+    "explanation": "500000000 bits/s times 0.04 s equals 20000000 bits; divide by 8 for 2500000 bytes.",
+    "source": {
+      "lecture": 1,
+      "page": 34
+    }
+  },
+  {
+    "id": "q022",
+    "difficulty": "Hard",
+    "topic": "TCP options",
+    "prompt": "For a 2500000-byte BDP, what is the smallest shift s such that 65535 times 2^s covers it?",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "correctIndex": 0,
+    "explanation": "Shift 5 gives 2097120 bytes, too small; shift 6 gives 4194240 bytes, sufficient.",
+    "source": {
+      "lecture": 1,
+      "page": 34
+    }
+  },
+  {
+    "id": "q023",
+    "difficulty": "Hard",
+    "topic": "Flow control",
+    "prompt": "Ignoring other limits, a 65535-byte window and 100 ms RTT cap throughput at approximately what?",
+    "options": [
+      "5.24 Mb/s",
+      "52.4 Mb/s",
+      "524 Mb/s",
+      "0.524 Mb/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "65535 times 8 divided by 0.1 equals 5242800 bits/s, about 5.24 Mb/s.",
+    "source": {
+      "lecture": 1,
+      "page": 22
+    }
+  },
+  {
+    "id": "q024",
+    "difficulty": "Hard",
+    "topic": "Congestion control",
+    "prompt": "Assume ideal doubling per RTT, IW 10 MSS and ssthresh 80 MSS. What is cwnd after three completed growth RTTs?",
+    "options": [
+      "80 MSS",
+      "40 MSS",
+      "13 MSS",
+      "160 MSS"
+    ],
+    "correctIndex": 0,
+    "explanation": "Three doublings give 10 to 20 to 40 to 80; congestion avoidance begins at the threshold.",
+    "source": {
+      "lecture": 2,
+      "page": 10
+    }
+  },
+  {
+    "id": "q025",
+    "difficulty": "Hard",
+    "topic": "Loss recovery",
+    "prompt": "Reno has 40 MSS in flight when three duplicate ACKs arrive. What cwnd is used immediately on fast-recovery entry?",
+    "options": [
+      "23 MSS",
+      "20 MSS",
+      "1 MSS",
+      "43 MSS"
+    ],
+    "correctIndex": 0,
+    "explanation": "ssthresh becomes 20 MSS, and entry cwnd is ssthresh plus 3 MSS, giving 23 MSS.",
+    "source": {
+      "lecture": 2,
+      "page": 22
+    }
+  },
+  {
+    "id": "q026",
+    "difficulty": "Hard",
+    "topic": "Loss recovery",
+    "prompt": "With ssthresh 20 MSS, Reno enters recovery at cwnd 23 MSS. Ten further dupACKs arrive, then a full recovery ACK. What is cwnd after that full ACK?",
+    "options": [
+      "20 MSS",
+      "33 MSS",
+      "23 MSS",
+      "1 MSS"
+    ],
+    "correctIndex": 0,
+    "explanation": "Extra duplicate ACKs temporarily inflate cwnd to 33 MSS; a full recovery ACK deflates it to ssthresh, 20 MSS.",
+    "source": {
+      "lecture": 2,
+      "page": 23
+    }
+  },
+  {
+    "id": "q027",
+    "difficulty": "Hard",
+    "topic": "Loss recovery",
+    "prompt": "After RTT samples 100 ms then 120 ms, what are SRTT and RTTVAR using the lecture's update order?",
+    "options": [
+      "102.5 ms and 42.5 ms",
+      "120 ms and 10 ms",
+      "100 ms and 50 ms",
+      "102.5 ms and 41.875 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "First sample initializes SRTT=100 and RTTVAR=50. Update RTTVAR using old SRTT: 0.75*50+0.25*20=42.5; SRTT becomes 102.5.",
+    "source": {
+      "lecture": 2,
+      "page": 16
+    }
+  },
+  {
+    "id": "q028",
+    "difficulty": "Hard",
+    "topic": "Loss recovery",
+    "prompt": "SRTT is 102.5 ms, RTTVAR is 42.5 ms and G is negligible. Applying the lecture's RFC 1-second minimum, what RTO results?",
+    "options": [
+      "1000 ms",
+      "272.5 ms",
+      "200 ms",
+      "170 ms"
+    ],
+    "correctIndex": 0,
+    "explanation": "The raw estimate is 102.5+4*42.5=272.5 ms; the explicitly specified RFC minimum raises it to 1000 ms.",
+    "source": {
+      "lecture": 2,
+      "page": 15
+    }
+  },
+  {
+    "id": "q029",
+    "difficulty": "Hard",
+    "topic": "Fairness & performance",
+    "prompt": "In the Mathis model, loss probability rises from 0.0001 to 0.01 with MSS and RTT unchanged. What happens to throughput?",
+    "options": [
+      "It falls to one tenth",
+      "It doubles",
+      "It stays unchanged",
+      "It falls to one hundredth"
+    ],
+    "correctIndex": 0,
+    "explanation": "Throughput is proportional to 1/sqrt(p). A hundredfold increase in p produces a tenfold decrease.",
+    "source": {
+      "lecture": 2,
+      "page": 30
+    }
+  },
+  {
+    "id": "q030",
+    "difficulty": "Hard",
+    "topic": "Fairness & performance",
+    "prompt": "Two flows at 80 and 20 Mb/s both halve, then each adds 25 Mb/s. What rates result?",
+    "options": [
+      "65 and 35 Mb/s",
+      "80 and 20 Mb/s",
+      "40 and 10 Mb/s",
+      "50 and 50 Mb/s"
+    ],
+    "correctIndex": 0,
+    "explanation": "Halving gives 40 and 10; adding 25 gives 65 and 35. Equal additive growth preserves the gap; halving reduces it.",
+    "source": {
+      "lecture": 2,
+      "page": 28
+    }
+  }
+]
